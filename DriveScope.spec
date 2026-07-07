@@ -15,6 +15,7 @@ hiddenimports += collect_submodules("uvicorn")
 hiddenimports += [
     "drivescope", "drivescope.api", "drivescope.engine", "drivescope.events",
     "drivescope.metrics", "drivescope.diagnostics", "drivescope.sdv_map",
+    "drivescope.criteria", "drivescope.edo_loader",
     "drivescope.channel_map", "drivescope.loader", "drivescope.report", "drivescope.cli",
 ]
 

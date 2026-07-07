@@ -20,6 +20,8 @@
   <div class="up-bar" id="bar"><i></i></div>
   <div id="status" class="up-status"></div>
   <button id="vehBtn" class="veh-open">⚙ Vehicle setup</button>
+  <button id="critBtn" class="veh-open" style="margin-left:8px">📋 Criteria (.edo)</button>
+  <input id="critFile" type="file" accept=".edo,.json" style="display:none">
 </div>
 <div id="vehModal" class="veh-modal" style="display:none">
   <div class="veh-card">
@@ -145,6 +147,27 @@ document.getElementById('vehReset').onclick=async()=>{
   vehCfg=await r.json(); vehRender(); vehMsg.textContent="Reset to defaults"; setTimeout(()=>vehMsg.textContent="",2000);
 };
 vehModal.addEventListener('click',e=>{ if(e.target===vehModal) vehModal.style.display="none"; });
+
+// ---------- Operation Modes Criteria (.edo) ----------
+const critBtn=document.getElementById('critBtn'), critFile=document.getElementById('critFile');
+critBtn.onclick=()=>critFile.click();
+critFile.onchange=async()=>{
+  if(!critFile.files.length) return;
+  const f=critFile.files[0];
+  status.textContent="Loading criteria "+f.name+" …";
+  status.classList.remove('up-err');
+  const fd=new FormData(); fd.append('file', f);
+  try{
+    const r=await fetch('/api/criteria',{method:'POST',body:fd});
+    const j=await r.json();
+    if(!r.ok) throw new Error(j.detail||('HTTP '+r.status));
+    status.textContent="Criteria loaded: "+j.n_modes+" operation mode(s) from "+f.name;
+  }catch(err){
+    status.classList.add('up-err');
+    status.textContent="Criteria error: "+err.message;
+  }
+  critFile.value='';
+};
 </script>
 </body>
 </html>

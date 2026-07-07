@@ -81,6 +81,15 @@
       (nun ? ` · <span style="color:#e3b341">${nun} unresolved: ${result.channels_unresolved.join(", ")}</span>` : ` · <span style="color:#3fce6a">all mapped</span>`));
     root.appendChild(chip);
 
+    if (result.criteria) {
+      const src = (result.criteria.source || "").split("/").pop();
+      let critHtml = `<b>Operation modes criteria:</b> ${src || "bundled"}`;
+      if (result.criteria.warning) {
+        critHtml += ` · <span style="color:#e3b341">${result.criteria.warning}</span>`;
+      }
+      root.appendChild(elH("div", "ds-chan", critHtml));
+    }
+
     if (!result.events.length) {
       const wrap = elH("div", "ds-empty");
       let html = "No drivability events were auto-detected in this recording.";
@@ -194,10 +203,10 @@
           rows += `<tr><td>${c.criteria}${dr}</td><td class="num">${c.t ?? "—"}</td><td class="num">${c.wl ?? "—"}</td><td class="num">${meas}</td><td>${pill}</td></tr>`;
         });
         const tbl = elH("table", null,
-          `<thead><tr><th>Criterion</th><th class="num">Target</th><th class="num">Warn</th><th class="num">Measured</th><th>Status</th></tr></thead><tbody>${rows}</tbody>`);
+          `<thead><tr><th>Criterion</th><th class="num">Target</th><th class="num">Warn</th><th class="num">Rating / measured</th><th>Status</th></tr></thead><tbody>${rows}</tbody>`);
         sc.appendChild(tbl);
         sc.appendChild(elH("div", "ds-note",
-          "Target / Warn are ODRIV rating limits (0–10). Measured values are DriveScope physical estimates from the raw signal — shown for orientation, not as AVL ratings."));
+          "Target / Warn are ODRIV Operation Modes Criteria limits (0–10 rating scale). DriveScope estimates a 0–10 rating from measured signals and compares it to your program targets."));
       } else {
         sc.appendChild(elH("div", "ds-empty", "No ODRIV criteria mapped for this SDV."));
       }

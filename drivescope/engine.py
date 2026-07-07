@@ -6,6 +6,7 @@ from . import events as ev_mod
 from . import metrics as met
 from . import diagnostics as diag
 from . import sdv_map
+from . import edo_loader
 from . import markers as mk_mod
 
 LANE_SIGNALS = ["ax_filt", "ax_raw", "pedal", "gear_act", "gear_tgt",
@@ -19,6 +20,7 @@ def _ds(sigs, step=2):
 def analyze(path, channel_config=None, max_events=24, vehicle_cfg=None):
     from . import vehicle as veh_cfg_mod
     vcfg = vehicle_cfg if vehicle_cfg is not None else veh_cfg_mod.load()
+    edo_loader.load()
     cmap = ChannelMap(channel_config)
     rec = Recording(path, cmap)
     t0, t1 = rec.duration()
@@ -34,7 +36,7 @@ def analyze(path, channel_config=None, max_events=24, vehicle_cfg=None):
     for i, ev in enumerate(detected):
         sigs, m = met.compute(rec, ev)
         issues, actions, verdict, kpis = diag.diagnose(ev, m)
-        sdv_name, sdv_group, criteria = sdv_map.scorecard(ev, m, issues)
+        sdv_name, sdv_group, criteria = sdv_map.scorecard(ev, m)
         evt_markers = mk_mod.build(ev, sigs, m, issues)
         keep = ["t"] + [s for s in LANE_SIGNALS if s in sigs]
         sub = {k: sigs[k] for k in keep}
@@ -56,6 +58,8 @@ def analyze(path, channel_config=None, max_events=24, vehicle_cfg=None):
 
     debug = ev_mod.summarize(rec) if not results else None
 
+    crit_meta = {"source": edo_loader.active_source(), "warning": edo_loader.load_warning()}
+
     return {
         "file": str(path), "duration": [round(t0, 2), round(t1, 2)],
         "channels_resolved": cmap.resolved, "channels_unresolved": cmap.unresolved,
@@ -63,4 +67,5 @@ def analyze(path, channel_config=None, max_events=24, vehicle_cfg=None):
         "n_events": len(results), "by_type": by_type, "events": results,
         "debug": debug,
         "vehicle_config": vcfg,
+        "criteria": crit_meta,
     }

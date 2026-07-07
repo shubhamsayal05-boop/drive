@@ -1,0 +1,24 @@
+DriveScope — Windows quick start
+================================
+
+EASIEST (if this PC has Python installed):
+  1. Unzip this folder anywhere (e.g. Desktop).
+  2. Double-click  DriveScope.bat
+     - first run installs everything (one time, a few minutes)
+     - your browser opens at http://localhost:8000
+  3. Drag a .dat / .mf4 file onto the page.
+  To stop: close the black DriveScope window.
+
+No Python on this PC?
+  Install Python 3.9+ from https://www.python.org/downloads/
+  and TICK "Add Python to PATH" during setup. Then use DriveScope.bat.
+
+Want a true standalone .exe to share with colleagues (no Python needed)?
+  On a Windows PC that has Python:
+  1. Double-click  Build-Windows-EXE.bat   (builds once, a few minutes)
+  2. Find your app in   dist\DriveScope\DriveScope.exe
+  3. Copy the whole  dist\DriveScope  folder to any Windows PC and
+     double-click DriveScope.exe.
+
+Command-line option (no browser/server):
+  python -m drivescope.cli analyze recording.dat -o report.html

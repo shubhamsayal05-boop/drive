@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DriveScope — Drivability Diagnostic</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;680;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+<div id="upload" class="up-wrap">
+  <div class="up-logo">Drive<span>Scope</span></div>
+  <div class="up-sub">Upload an INCA <b>.dat</b> / MDF recording. DriveScope auto-detects tip-in downshifts and
+    power-on upshifts, scores the drivability issues, and suggests calibration actions.</div>
+  <div id="drop" class="up-drop">
+    <div class="ic">⬆</div>
+    <div class="t">Drop a .dat / .mf4 file here, or click to browse</div>
+    <div class="h">processed locally by your DriveScope server · nothing leaves your machine</div>
+  </div>
+  <input id="file" type="file" accept=".dat,.mf4,.mdf,.mf3" style="display:none">
+  <div class="up-bar" id="bar"><i></i></div>
+  <div id="status" class="up-status"></div>
+  <button id="vehBtn" class="veh-open">⚙ Vehicle setup</button>
+</div>
+<div id="vehModal" class="veh-modal" style="display:none">
+  <div class="veh-card">
+    <div class="veh-head"><b>Vehicle &amp; plant configuration</b>
+      <span class="veh-sub">mirrors AVL-DRIVE vehicle / operation-mode settings · feeds detection &amp; the HIL plant</span>
+      <button id="vehClose" class="veh-x">✕</button></div>
+    <div id="vehForm" class="veh-body"></div>
+    <div class="veh-foot"><span id="vehMsg"></span>
+      <button id="vehReset" class="veh-reset">Reset to defaults</button>
+      <button id="vehSave" class="veh-save">Save configuration</button></div>
+  </div>
+</div>
+<div id="app" class="ds-app" style="display:none"></div>
+
+<script src="/static/app.js"></script>
+<script>
+const drop=document.getElementById('drop'), file=document.getElementById('file'),
+      status=document.getElementById('status'), bar=document.getElementById('bar'),
+      uploadView=document.getElementById('upload'), appView=document.getElementById('app');
+drop.onclick=()=>file.click();
+['dragover','dragenter'].forEach(e=>drop.addEventListener(e,ev=>{ev.preventDefault();drop.classList.add('hot');}));
+['dragleave','drop'].forEach(e=>drop.addEventListener(e,ev=>{ev.preventDefault();drop.classList.remove('hot');}));
+drop.addEventListener('drop',ev=>{if(ev.dataTransfer.files.length)send(ev.dataTransfer.files[0]);});
+file.onchange=()=>{if(file.files.length)send(file.files[0]);};
+
+async function send(f){
+  status.textContent="Parsing "+f.name+" … (large MDF files can take a moment)";
+  status.classList.remove('up-err'); bar.style.display="block";
+  const fd=new FormData(); fd.append("file",f);
+  try{
+    const r=await fetch("/api/analyze",{method:"POST",body:fd});
+    if(!r.ok){throw new Error((await r.json()).detail||("HTTP "+r.status));}
+    const result=await r.json();
+    bar.style.display="none";
+    uploadView.style.display="none"; appView.style.display="block";
+    DriveScope.renderApp(appView, result);
+    const back=document.createElement('button');
+    back.textContent="← Analyze another file"; back.className="ds-tab";
+    back.style.marginBottom="10px";
+    back.onclick=()=>{appView.style.display="none";uploadView.style.display="block";status.textContent="";file.value="";};
+    appView.prepend(back);
+  }catch(err){
+    bar.style.display="none"; status.classList.add('up-err');
+    status.textContent="Error: "+err.message;
+  }
+}
+
+// ---------- Vehicle / plant configuration ----------
+const vehModal=document.getElementById('vehModal'), vehForm=document.getElementById('vehForm'), vehMsg=document.getElementById('vehMsg');
+const VEH_SECTIONS=[
+  ["Vehicle",[
+    ["vehicle.name","Name","text"],["vehicle.mass_kg","Mass","kg"],["vehicle.payload_kg","Payload","kg"],
+    ["vehicle.drive","Drive (FWD/RWD/AWD)","text"],
+    ["vehicle.A0_N","Road-load A0","N"],["vehicle.B0_N_per_kph","Road-load B0","N/kph"],["vehicle.C0_N_per_kph2","Road-load C0","N/kph²"],
+    ["vehicle.wheel_radius_m","Wheel radius","m"],["vehicle.tire","Tire","text"],
+  ]],
+  ["Engine",[
+    ["engine.displacement_l","Displacement","L"],["engine.cylinders","Cylinders","-"],
+    ["engine.max_power_kw","Max power","kW"],["engine.power_rpm","@ rpm","rpm"],
+    ["engine.max_torque_nm","Max torque","Nm"],["engine.torque_rpm","@ rpm","rpm"],
+    ["engine.idle_rpm","Idle","rpm"],["engine.rev_limit_rpm","Rev limiter","rpm"],
+  ]],
+  ["Transmission",[
+    ["transmission.gears","Number of gears","-"],
+    ["transmission.kph_per_1000rpm","kph @ 1000 rpm per gear (comma-sep)","list"],
+    ["transmission.tcc_open","TCC open","-"],["transmission.tcc_locked","TCC locked","-"],["transmission.tcc_slip","TCC slip","-"],
+  ]],
+  ["Operation-mode thresholds",[
+    ["thresholds.zero_speed_kph","Zero vehicle speed","kph"],["thresholds.zero_pedal_pct","Zero accelerator","%"],
+    ["thresholds.full_load_pedal_pct","Full-load pedal","%"],["thresholds.kickdown_pedal_pct","Kickdown pedal","%"],
+    ["thresholds.tip_rate_pct_s","Min accelerator rate (tip-in/out)","%/s"],["thresholds.decel_brake_pct","Constant brake threshold","%"],
+    ["thresholds.rolling_start_lower_kph","Rolling start lower speed","kph"],["thresholds.rolling_start_delta_kph","Rolling start delta","kph"],
+    ["thresholds.hill_start_grad_pct","Hill start gradient","%"],
+    ["thresholds.transition_const_rpm","Transition-to-const engine","rpm"],["thresholds.transition_const_kph","Transition-to-const speed","kph"],
+    ["thresholds.highest_creeping_gear","Highest creeping gear","-"],
+  ]],
+  ["Signal calibration",[
+    ["signal_cal.pedal_released","Pedal released","raw"],["signal_cal.pedal_full","Pedal full","raw"],
+    ["signal_cal.brake_free_travel_pct","Brake free travel","%"],["signal_cal.brake_full","Brake full","raw"],
+    ["signal_cal.gear_reverse_value","Reverse gear value","-"],
+    ["signal_cal.lever_P","Lever P","-"],["signal_cal.lever_R","Lever R","-"],["signal_cal.lever_N","Lever N","-"],["signal_cal.lever_D","Lever D","-"],
+  ]],
+];
+function dig(o,path){return path.split('.').reduce((a,k)=>a&&a[k],o);}
+function setDig(o,path,v){const ks=path.split('.');let a=o;for(let i=0;i<ks.length-1;i++){a[ks[i]]=a[ks[i]]||{};a=a[ks[i]];}a[ks[ks.length-1]]=v;}
+let vehCfg={};
+async function vehLoad(){ vehCfg=await (await fetch('/api/vehicle')).json(); vehRender(); }
+function vehRender(){
+  vehForm.innerHTML="";
+  VEH_SECTIONS.forEach(([title,fields])=>{
+    const sec=document.createElement('div'); sec.className="veh-sec";
+    sec.innerHTML=`<h4>${title}</h4>`;
+    const grid=document.createElement('div'); grid.className="veh-grid";
+    fields.forEach(([path,label,unit])=>{
+      let val=dig(vehCfg,path); if(Array.isArray(val))val=val.join(", ");
+      const cell=document.createElement('label'); cell.className="veh-cell";
+      cell.innerHTML=`<span>${label}${unit&&unit!=='text'&&unit!=='list'?` <i>${unit}</i>`:""}</span>`;
+      const inp=document.createElement('input'); inp.value=(val==null?"":val); inp.dataset.path=path; inp.dataset.kind=unit;
+      cell.appendChild(inp); grid.appendChild(cell);
+    });
+    sec.appendChild(grid); vehForm.appendChild(sec);
+  });
+}
+function vehCollect(){
+  vehForm.querySelectorAll('input').forEach(inp=>{
+    const p=inp.dataset.path, k=inp.dataset.kind; let v=inp.value.trim();
+    if(k==='list'){ v=v.split(',').map(x=>parseFloat(x.trim())).filter(x=>!isNaN(x)); }
+    else if(k==='text'){ /* keep string */ }
+    else { const n=parseFloat(v); v=isNaN(n)?v:n; }
+    setDig(vehCfg,p,v);
+  });
+}
+document.getElementById('vehBtn').onclick=async()=>{ await vehLoad(); vehModal.style.display="flex"; };
+document.getElementById('vehClose').onclick=()=>{ vehModal.style.display="none"; };
+document.getElementById('vehSave').onclick=async()=>{
+  vehCollect();
+  const r=await fetch('/api/vehicle',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(vehCfg)});
+  if(r.ok){ vehCfg=await r.json(); vehMsg.textContent="Saved ✓ — applies to the next analysis"; setTimeout(()=>vehMsg.textContent="",2500); }
+  else vehMsg.textContent="Save failed";
+};
+document.getElementById('vehReset').onclick=async()=>{
+  const r=await fetch('/api/vehicle',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({})});
+  vehCfg=await r.json(); vehRender(); vehMsg.textContent="Reset to defaults"; setTimeout(()=>vehMsg.textContent="",2000);
+};
+vehModal.addEventListener('click',e=>{ if(e.target===vehModal) vehModal.style.display="none"; });
+</script>
+</body>
+</html>

@@ -1,0 +1,4176 @@
+{
+ "(PT) KD - tip in downshift": [
+  {
+   "criteria": "Ax gradients after ratio change",
+   "t": 8,
+   "wl": 7.6,
+   "driv": 1
+  },
+  {
+   "criteria": "Jerks",
+   "t": 7.5,
+   "wl": 6.3,
+   "driv": 1
+  },
+  {
+   "criteria": "Kick",
+   "t": 7.5,
+   "wl": 6.6,
+   "driv": 1
+  },
+  {
+   "criteria": "Shock",
+   "t": 7.9,
+   "wl": 7,
+   "driv": 1
+  },
+  {
+   "criteria": "Acceleration disturbances",
+   "t": 7.5,
+   "wl": 6.7,
+   "driv": 2
+  },
+  {
+   "criteria": "Ax gradients during ratio change",
+   "t": 8,
+   "wl": 7.4,
+   "driv": 2
+  },
+  {
+   "criteria": "Steadiness",
+   "t": 7,
+   "wl": 6.3,
+   "driv": 2
+  },
+  {
+   "criteria": "Traction reduction",
+   "t": 7.1,
+   "wl": 6.6,
+   "driv": 2
+  },
+  {
+   "criteria": "Acceleration disturbances HF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration disturbances LF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Ax build-up delay",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Ax increase",
+   "t": 6.5,
+   "wl": 5.9,
+   "driv": 3
+  },
+  {
+   "criteria": "Ax increase delay",
+   "t": 7.4,
+   "wl": 6.6,
+   "driv": 3
+  },
+  {
+   "criteria": "Engine speed at engagement",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Initial Bump",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Response delay",
+   "t": 6.8,
+   "wl": 5.8,
+   "driv": 3
+  },
+  {
+   "criteria": "Shift characteristic",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Shift delay",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Shift duration",
+   "t": 7.6,
+   "wl": 7.2,
+   "driv": 3
+  },
+  {
+   "criteria": "Speed increase",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  }
+ ],
+ "(TO) KD - tip in downshift": [
+  {
+   "criteria": "Ax gradients after ratio change",
+   "t": 7.9,
+   "wl": 7.4,
+   "driv": 1
+  },
+  {
+   "criteria": "Jerks",
+   "t": 7.5,
+   "wl": 6.3,
+   "driv": 1
+  },
+  {
+   "criteria": "Kick",
+   "t": 7.3,
+   "wl": 6.7,
+   "driv": 1
+  },
+  {
+   "criteria": "Shock",
+   "t": 7.8,
+   "wl": 7,
+   "driv": 1
+  },
+  {
+   "criteria": "Acceleration disturbances",
+   "t": 7.6,
+   "wl": 7.2,
+   "driv": 2
+  },
+  {
+   "criteria": "Ax gradients during ratio change",
+   "t": 8,
+   "wl": 7.4,
+   "driv": 2
+  },
+  {
+   "criteria": "Steadiness",
+   "t": 7,
+   "wl": 6.3,
+   "driv": 2
+  },
+  {
+   "criteria": "Traction reduction",
+   "t": 7.1,
+   "wl": 6.6,
+   "driv": 2
+  },
+  {
+   "criteria": "Acceleration disturbances HF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration disturbances LF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Ax build-up delay",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Ax increase",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Ax increase delay",
+   "t": 7.4,
+   "wl": 6.6,
+   "driv": 3
+  },
+  {
+   "criteria": "Engine speed at engagement",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Initial Bump",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Response delay",
+   "t": 6.8,
+   "wl": 5.8,
+   "driv": 3
+  },
+  {
+   "criteria": "Shift characteristic",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Shift delay",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Shift duration",
+   "t": 7.6,
+   "wl": 7.2,
+   "driv": 3
+  },
+  {
+   "criteria": "Speed increase",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  }
+ ],
+ "Auto start": [
+  {
+   "criteria": "Surge",
+   "t": 7.3,
+   "wl": 6.7,
+   "driv": 1
+  },
+  {
+   "criteria": "Acceleration disturbances",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration disturbances HF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration disturbances LF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Engine speed overshoot",
+   "t": 9.2,
+   "wl": 8.7,
+   "driv": 3
+  },
+  {
+   "criteria": "Engine speed stumble",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Engine speed undershoot",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Idle stabilization duration",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Speed pickup duration",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Start duration",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Starter speed",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Traction reduction",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  }
+ ],
+ "Auto start vehicle moving": [
+  {
+   "criteria": "Surge",
+   "t": 7.3,
+   "wl": 6.7,
+   "driv": 1
+  },
+  {
+   "criteria": "Acceleration disturbances",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration disturbances HF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration disturbances LF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Engine speed overshoot",
+   "t": 9.2,
+   "wl": 8.7,
+   "driv": 3
+  },
+  {
+   "criteria": "Engine speed stumble",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Engine speed undershoot",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Idle stabilization duration",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Speed pickup duration",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Start duration",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Starter speed",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Traction reduction",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  }
+ ],
+ "Auto start vehicle stationary": [
+  {
+   "criteria": "Surge",
+   "t": 7.3,
+   "wl": 6.7,
+   "driv": 1
+  },
+  {
+   "criteria": "Acceleration disturbances",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration disturbances HF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration disturbances LF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Engine speed overshoot",
+   "t": 9.2,
+   "wl": 8.7,
+   "driv": 3
+  },
+  {
+   "criteria": "Engine speed stumble",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Engine speed undershoot",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Idle stabilization duration",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Speed pickup duration",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Start duration",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Starter speed",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  }
+ ],
+ "Auto stop": [
+  {
+   "criteria": "Surge",
+   "t": 8.9,
+   "wl": 8,
+   "driv": 1
+  },
+  {
+   "criteria": "Acceleration disturbances",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration disturbances HF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration disturbances LF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Duration",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  }
+ ],
+ "Coast - brake-on downshift": [
+  {
+   "criteria": "Jerks",
+   "t": 7,
+   "wl": 6,
+   "driv": 1
+  },
+  {
+   "criteria": "Kick",
+   "t": 8,
+   "wl": 6.8,
+   "driv": 1
+  },
+  {
+   "criteria": "Shock",
+   "t": 8,
+   "wl": 7.3,
+   "driv": 1
+  },
+  {
+   "criteria": "Acceleration disturbances",
+   "t": 7.2,
+   "wl": 6.7,
+   "driv": 2
+  },
+  {
+   "criteria": "Ax gradients before ratio change",
+   "t": 7.3,
+   "wl": 5,
+   "driv": 2
+  },
+  {
+   "criteria": "Ax gradients during ratio change",
+   "t": 7.2,
+   "wl": 5,
+   "driv": 2
+  },
+  {
+   "criteria": "Steadiness",
+   "t": 8.7,
+   "wl": 8.4,
+   "driv": 2
+  },
+  {
+   "criteria": "Traction reduction",
+   "t": 8,
+   "wl": 7.6,
+   "driv": 2
+  },
+  {
+   "criteria": "Acceleration disturbances HF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration disturbances LF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Shift delay",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Shift duration",
+   "t": 8.8,
+   "wl": 8.5,
+   "driv": 3
+  },
+  {
+   "criteria": "Speed increase",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  }
+ ],
+ "Coast - brake-on upshift": [
+  {
+   "criteria": "Deceleration characteristic",
+   "t": 8,
+   "wl": 7.4,
+   "driv": 1
+  },
+  {
+   "criteria": "Jerks",
+   "t": 6.7,
+   "wl": 6,
+   "driv": 1
+  },
+  {
+   "criteria": "Kick",
+   "t": 7.3,
+   "wl": 6,
+   "driv": 1
+  },
+  {
+   "criteria": "Shock",
+   "t": 7,
+   "wl": 6.2,
+   "driv": 1
+  },
+  {
+   "criteria": "Acceleration disturbances",
+   "t": 6.9,
+   "wl": 6.1,
+   "driv": 2
+  },
+  {
+   "criteria": "Ax gradients after ratio change",
+   "t": 7.1,
+   "wl": 5,
+   "driv": 2
+  },
+  {
+   "criteria": "Ax gradients during ratio change",
+   "t": 7.3,
+   "wl": 5,
+   "driv": 2
+  },
+  {
+   "criteria": "Steadiness",
+   "t": 7.1,
+   "wl": 6.7,
+   "driv": 2
+  },
+  {
+   "criteria": "Traction reduction",
+   "t": 7,
+   "wl": 6,
+   "driv": 2
+  },
+  {
+   "criteria": "Acceleration disturbances HF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration disturbances LF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Decel. characteristic",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Shift delay",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Shift duration",
+   "t": 8,
+   "wl": 7.7,
+   "driv": 3
+  },
+  {
+   "criteria": "Speed decrease",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  }
+ ],
+ "Coast-brake-on downshift Cold": [
+  {
+   "criteria": "Jerks",
+   "t": 7,
+   "wl": 6,
+   "driv": 1
+  },
+  {
+   "criteria": "Kick",
+   "t": 8,
+   "wl": 6.8,
+   "driv": 1
+  },
+  {
+   "criteria": "Shock",
+   "t": 8,
+   "wl": 7.3,
+   "driv": 1
+  },
+  {
+   "criteria": "Acceleration disturbances",
+   "t": 7.2,
+   "wl": 6.7,
+   "driv": 2
+  },
+  {
+   "criteria": "Ax gradients before ratio change",
+   "t": 7,
+   "wl": 5,
+   "driv": 2
+  },
+  {
+   "criteria": "Ax gradients during ratio change",
+   "t": 7.3,
+   "wl": 5,
+   "driv": 2
+  },
+  {
+   "criteria": "Steadiness",
+   "t": 8.7,
+   "wl": 8.4,
+   "driv": 2
+  },
+  {
+   "criteria": "Traction reduction",
+   "t": 8,
+   "wl": 7.6,
+   "driv": 2
+  },
+  {
+   "criteria": "Acceleration disturbances HF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration disturbances LF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Shift delay",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Shift duration",
+   "t": 8.8,
+   "wl": 8.5,
+   "driv": 3
+  },
+  {
+   "criteria": "Speed increase",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  }
+ ],
+ "Converter controlled slip": [
+  {
+   "criteria": "Acceleration disturbances",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration disturbances HF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration disturbances LF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Correlation",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Engine speed step",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Steadiness",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  }
+ ],
+ "Converter lock up": [
+  {
+   "criteria": "Acceleration disturbances",
+   "t": 7.6,
+   "wl": 6.6,
+   "driv": 1
+  },
+  {
+   "criteria": "Engine speed step",
+   "t": 7.8,
+   "wl": 7.3,
+   "driv": 2
+  },
+  {
+   "criteria": "Acceleration disturbances HF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration disturbances LF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Correlation",
+   "t": 7.8,
+   "wl": 7.3,
+   "driv": 3
+  },
+  {
+   "criteria": "Steadiness",
+   "t": 7.8,
+   "wl": 7.3,
+   "driv": 3
+  }
+ ],
+ "Converter release": [
+  {
+   "criteria": "Acceleration disturbances",
+   "t": 8.9,
+   "wl": 8,
+   "driv": 1
+  },
+  {
+   "criteria": "Acceleration disturbances HF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration disturbances LF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Correlation",
+   "t": 7.8,
+   "wl": 7.3,
+   "driv": 3
+  },
+  {
+   "criteria": "Steadiness",
+   "t": 7.8,
+   "wl": 7.3,
+   "driv": 3
+  }
+ ],
+ "DA Rolling Start": [
+  {
+   "criteria": "Acceleration disturbances",
+   "t": 8,
+   "wl": 7,
+   "driv": 2
+  },
+  {
+   "criteria": "Engagement steadiness",
+   "t": 7.4,
+   "wl": 5.1,
+   "driv": 2
+  },
+  {
+   "criteria": "Acceleration disturbances HF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration disturbances LF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Response delay",
+   "t": 7.4,
+   "wl": 6.5,
+   "driv": 3
+  }
+ ],
+ "DASS - Eng Off - COM": [
+  {
+   "criteria": "Acceleration disturbances",
+   "t": 7.5,
+   "wl": 6.2,
+   "driv": 1
+  },
+  {
+   "criteria": "Brake release bump",
+   "t": 7.7,
+   "wl": 6.7,
+   "driv": 1
+  },
+  {
+   "criteria": "Stumble",
+   "t": 7.8,
+   "wl": 6.1,
+   "driv": 1
+  },
+  {
+   "criteria": "Acceleration peak",
+   "t": 7.6,
+   "wl": 7,
+   "driv": 2
+  },
+  {
+   "criteria": "Bump",
+   "t": 8,
+   "wl": 7.3,
+   "driv": 2
+  },
+  {
+   "criteria": "Engagement steadiness",
+   "t": 7.4,
+   "wl": 7,
+   "driv": 2
+  },
+  {
+   "criteria": "Shock",
+   "t": 7.5,
+   "wl": 7,
+   "driv": 2
+  },
+  {
+   "criteria": "Acceleration disturbances HF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration disturbances LF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration performance",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Agility",
+   "t": 7.6,
+   "wl": 6.7,
+   "driv": 3
+  },
+  {
+   "criteria": "Brake release delay",
+   "t": 7.8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Brake release surge",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Engine speed overshoot",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Jerks",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Response delay",
+   "t": 7.4,
+   "wl": 6.8,
+   "driv": 3
+  }
+ ],
+ "DASS - Extended Eng Off": [
+  {
+   "criteria": "Acceleration disturbances",
+   "t": 7.5,
+   "wl": 6.2,
+   "driv": 1
+  },
+  {
+   "criteria": "Brake release bump",
+   "t": 7.7,
+   "wl": 6.7,
+   "driv": 1
+  },
+  {
+   "criteria": "Stumble",
+   "t": 7.8,
+   "wl": 6.1,
+   "driv": 1
+  },
+  {
+   "criteria": "Acceleration peak",
+   "t": 7.6,
+   "wl": 7,
+   "driv": 2
+  },
+  {
+   "criteria": "Bump",
+   "t": 8,
+   "wl": 7.3,
+   "driv": 2
+  },
+  {
+   "criteria": "Engagement steadiness",
+   "t": 7.4,
+   "wl": 7,
+   "driv": 2
+  },
+  {
+   "criteria": "Shock",
+   "t": 7.5,
+   "wl": 7,
+   "driv": 2
+  },
+  {
+   "criteria": "Acceleration disturbances HF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration disturbances LF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration performance",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Agility",
+   "t": 7.6,
+   "wl": 6.7,
+   "driv": 3
+  },
+  {
+   "criteria": "Brake release delay",
+   "t": 7.8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Brake release surge",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Engine speed overshoot",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Jerks",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Response delay",
+   "t": 7.4,
+   "wl": 6.8,
+   "driv": 3
+  }
+ ],
+ "DASS Eng Off quick": [
+  {
+   "criteria": "Acceleration disturbances",
+   "t": 7.5,
+   "wl": 6.2,
+   "driv": 1
+  },
+  {
+   "criteria": "Brake release bump",
+   "t": 7.7,
+   "wl": 6.7,
+   "driv": 1
+  },
+  {
+   "criteria": "Stumble",
+   "t": 7.8,
+   "wl": 6.1,
+   "driv": 1
+  },
+  {
+   "criteria": "Acceleration peak",
+   "t": 7.6,
+   "wl": 7,
+   "driv": 2
+  },
+  {
+   "criteria": "Bump",
+   "t": 8,
+   "wl": 7.3,
+   "driv": 2
+  },
+  {
+   "criteria": "Engagement steadiness",
+   "t": 7.4,
+   "wl": 7,
+   "driv": 2
+  },
+  {
+   "criteria": "Shock",
+   "t": 7.5,
+   "wl": 7,
+   "driv": 2
+  },
+  {
+   "criteria": "Acceleration disturbances HF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration disturbances LF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration performance",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Agility",
+   "t": 7.6,
+   "wl": 6.7,
+   "driv": 3
+  },
+  {
+   "criteria": "Brake release delay",
+   "t": 7.8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Brake release surge",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Engine speed overshoot",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Jerks",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Response delay",
+   "t": 7.4,
+   "wl": 6.8,
+   "driv": 3
+  }
+ ],
+ "DASS Eng Off slow": [
+  {
+   "criteria": "Acceleration disturbances",
+   "t": 7.5,
+   "wl": 6.2,
+   "driv": 1
+  },
+  {
+   "criteria": "Brake release bump",
+   "t": 7.7,
+   "wl": 6.7,
+   "driv": 1
+  },
+  {
+   "criteria": "Stumble",
+   "t": 7.8,
+   "wl": 6.1,
+   "driv": 1
+  },
+  {
+   "criteria": "Acceleration peak",
+   "t": 7.6,
+   "wl": 7,
+   "driv": 2
+  },
+  {
+   "criteria": "Bump",
+   "t": 8,
+   "wl": 7.3,
+   "driv": 2
+  },
+  {
+   "criteria": "Engagement steadiness",
+   "t": 7.4,
+   "wl": 7,
+   "driv": 2
+  },
+  {
+   "criteria": "Shock",
+   "t": 7.5,
+   "wl": 7,
+   "driv": 2
+  },
+  {
+   "criteria": "Acceleration disturbances HF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration disturbances LF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration performance",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Agility",
+   "t": 7.6,
+   "wl": 6.7,
+   "driv": 3
+  },
+  {
+   "criteria": "Brake release delay",
+   "t": 7.8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Brake release surge",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Engine speed overshoot",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Jerks",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Response delay",
+   "t": 7.4,
+   "wl": 6.8,
+   "driv": 3
+  }
+ ],
+ "DASS Eng On": [
+  {
+   "criteria": "Acceleration disturbances",
+   "t": 6.2,
+   "wl": 5.8,
+   "driv": 1
+  },
+  {
+   "criteria": "Engagement shock",
+   "t": 6.4,
+   "wl": 5.2,
+   "driv": 1
+  },
+  {
+   "criteria": "Shock",
+   "t": 7.3,
+   "wl": 6.3,
+   "driv": 1
+  },
+  {
+   "criteria": "Acceleration peak",
+   "t": 7.2,
+   "wl": 6.3,
+   "driv": 2
+  },
+  {
+   "criteria": "Bump",
+   "t": 7.4,
+   "wl": 6.6,
+   "driv": 2
+  },
+  {
+   "criteria": "Clutch grabbing",
+   "t": 6.7,
+   "wl": 6.3,
+   "driv": 2
+  },
+  {
+   "criteria": "Engagement point",
+   "t": 7.4,
+   "wl": 6.8,
+   "driv": 2
+  },
+  {
+   "criteria": "Engagement steadiness",
+   "t": 7.9,
+   "wl": 7,
+   "driv": 2
+  },
+  {
+   "criteria": "Stumble",
+   "t": 7.4,
+   "wl": 5.2,
+   "driv": 2
+  },
+  {
+   "criteria": "Acceleration disturbances HF",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration disturbances LF",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration performance",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Agility",
+   "t": 7.6,
+   "wl": 6.7,
+   "driv": 3
+  },
+  {
+   "criteria": "Brake release bump",
+   "t": 7.7,
+   "wl": 6.7,
+   "driv": 3
+  },
+  {
+   "criteria": "Brake release delay",
+   "t": 7.8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Brake release surge",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Engine speed drop",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Engine speed overshoot",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Jerks",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Response delay",
+   "t": 7.2,
+   "wl": 5.3,
+   "driv": 3
+  },
+  {
+   "criteria": "Stall sensitivity",
+   "t": 8,
+   "wl": 7.7,
+   "driv": 3
+  }
+ ],
+ "Drive Away Creep Eng Off": [
+  {
+   "criteria": "Acceleration disturbances",
+   "t": 7.7,
+   "wl": 6.8,
+   "driv": 1
+  },
+  {
+   "criteria": "Brake release bump",
+   "t": 7.7,
+   "wl": 6.7,
+   "driv": 1
+  },
+  {
+   "criteria": "Engagement shock",
+   "t": 6.1,
+   "wl": 5,
+   "driv": 1
+  },
+  {
+   "criteria": "Jerks",
+   "t": 6,
+   "wl": 5.2,
+   "driv": 1
+  },
+  {
+   "criteria": "Clutch grabbing",
+   "t": 6.7,
+   "wl": 5.7,
+   "driv": 2
+  },
+  {
+   "criteria": "Engagement point",
+   "t": 7.7,
+   "wl": 7.2,
+   "driv": 2
+  },
+  {
+   "criteria": "Acceleration disturbances HF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration disturbances LF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Brake release delay",
+   "t": 7.4,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Brake release surge",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Engine speed drop",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Stall sensitivity",
+   "t": 8,
+   "wl": 7.7,
+   "driv": 3
+  }
+ ],
+ "Drive Away Creep EngOff": [
+  {
+   "criteria": "Engagement shock",
+   "t": 7.3,
+   "wl": 7,
+   "driv": 1
+  },
+  {
+   "criteria": "Jerks",
+   "t": 6.4,
+   "wl": 6.1,
+   "driv": 1
+  },
+  {
+   "criteria": "Acceleration disturbances",
+   "t": 7,
+   "wl": 6.6,
+   "driv": 2
+  },
+  {
+   "criteria": "Clutch grabbing",
+   "t": 7.2,
+   "wl": 6.9,
+   "driv": 2
+  },
+  {
+   "criteria": "Engagement point",
+   "t": 8,
+   "wl": 7.7,
+   "driv": 2
+  },
+  {
+   "criteria": "Engine speed drop",
+   "t": 8,
+   "wl": 7.7,
+   "driv": 3
+  },
+  {
+   "criteria": "Stall sensitivity",
+   "t": 8,
+   "wl": 7.7,
+   "driv": 3
+  }
+ ],
+ "Drive Away Hill Start": [
+  {
+   "criteria": "Stumble",
+   "t": 7.8,
+   "wl": 6.1,
+   "driv": 1
+  },
+  {
+   "criteria": "Acceleration disturbances",
+   "t": 8,
+   "wl": 7,
+   "driv": 2
+  },
+  {
+   "criteria": "Acceleration peak",
+   "t": 6.9,
+   "wl": 6.3,
+   "driv": 2
+  },
+  {
+   "criteria": "Bump",
+   "t": 8,
+   "wl": 7.3,
+   "driv": 2
+  },
+  {
+   "criteria": "Engagement steadiness",
+   "t": 7.4,
+   "wl": 7,
+   "driv": 2
+  },
+  {
+   "criteria": "Shock",
+   "t": 7.5,
+   "wl": 7,
+   "driv": 2
+  },
+  {
+   "criteria": "Acceleration Performance",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration disturbances HF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration disturbances LF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Engine speed overshoot",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Jerks",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  }
+ ],
+ "Drive Away Stand Start EngOff": [
+  {
+   "criteria": "Brake release bump",
+   "t": 7.7,
+   "wl": 6.7,
+   "driv": 1
+  },
+  {
+   "criteria": "Engagement shock",
+   "t": 7.5,
+   "wl": 7.2,
+   "driv": 1
+  },
+  {
+   "criteria": "Jerks",
+   "t": 6.8,
+   "wl": 6.5,
+   "driv": 1
+  },
+  {
+   "criteria": "Stumble",
+   "t": 7.8,
+   "wl": 6.1,
+   "driv": 1
+  },
+  {
+   "criteria": "Acceleration disturbances",
+   "t": 7,
+   "wl": 6.6,
+   "driv": 2
+  },
+  {
+   "criteria": "Bump",
+   "t": 8,
+   "wl": 7.3,
+   "driv": 2
+  },
+  {
+   "criteria": "Clutch grabbing",
+   "t": 7.3,
+   "wl": 7,
+   "driv": 2
+  },
+  {
+   "criteria": "Engagement point",
+   "t": 8,
+   "wl": 7.7,
+   "driv": 2
+  },
+  {
+   "criteria": "Engagement steadiness",
+   "t": 7.4,
+   "wl": 7,
+   "driv": 2
+  },
+  {
+   "criteria": "Acceleration Performance",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration disturbances HF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration disturbances LF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration peak",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Agility",
+   "t": 7.6,
+   "wl": 6.7,
+   "driv": 3
+  },
+  {
+   "criteria": "Brake release delay",
+   "t": 7.8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Brake release surge",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Engine speed drop",
+   "t": 8,
+   "wl": 7.7,
+   "driv": 3
+  },
+  {
+   "criteria": "Engine speed overshoot",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Response delay",
+   "t": 7.4,
+   "wl": 6.8,
+   "driv": 3
+  },
+  {
+   "criteria": "Shock",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Stall sensitivity",
+   "t": 8,
+   "wl": 7.7,
+   "driv": 3
+  }
+ ],
+ "Lever change": [
+  {
+   "criteria": "Acceleration disturbances",
+   "t": 7.7,
+   "wl": 7.2,
+   "driv": 1
+  },
+  {
+   "criteria": "Bump",
+   "t": 8.6,
+   "wl": 7.1,
+   "driv": 1
+  },
+  {
+   "criteria": "Engine speed overshoot",
+   "t": 8,
+   "wl": 6.7,
+   "driv": 2
+  },
+  {
+   "criteria": "Engine speed undershoot",
+   "t": 7.7,
+   "wl": 6,
+   "driv": 2
+  },
+  {
+   "criteria": "Acceleration disturbances HF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration disturbances LF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Engine speed drift",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Engine speed fluctuations",
+   "t": 8,
+   "wl": 7.7,
+   "driv": 3
+  },
+  {
+   "criteria": "Idle stabilization duration",
+   "t": 8.1,
+   "wl": 6.7,
+   "driv": 3
+  },
+  {
+   "criteria": "Shift delay",
+   "t": 6,
+   "wl": 5.7,
+   "driv": 3
+  },
+  {
+   "criteria": "Speed fluctuations",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Stabilization duration",
+   "t": 8.1,
+   "wl": 6.7,
+   "driv": 3
+  }
+ ],
+ "Load Reversal Downshift": [
+  {
+   "criteria": "Acceleration disturbances",
+   "t": 7.4,
+   "wl": 6.2,
+   "driv": 1
+  },
+  {
+   "criteria": "Steadiness",
+   "t": 8.2,
+   "wl": 7.2,
+   "driv": 2
+  },
+  {
+   "criteria": "Acceleration disturbances HF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration disturbances LF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Shift delay",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Shift duration",
+   "t": 7.6,
+   "wl": 7.2,
+   "driv": 3
+  },
+  {
+   "criteria": "Speed decrease",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Speed increase",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  }
+ ],
+ "Load Reversal upshift": [
+  {
+   "criteria": "Acceleration disturbances",
+   "t": 6.7,
+   "wl": 5.7,
+   "driv": 1
+  },
+  {
+   "criteria": "Acceleration disturbances HF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration disturbances LF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Shift delay",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Shift duration",
+   "t": 8,
+   "wl": 7.7,
+   "driv": 3
+  },
+  {
+   "criteria": "Speed decrease",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Steadiness",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  }
+ ],
+ "Maneuvering": [
+  {
+   "criteria": "Acceleration disturbances",
+   "t": 8.3,
+   "wl": 6.7,
+   "driv": 1
+  },
+  {
+   "criteria": "Acceleration disturbances HF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration disturbances LF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Bump",
+   "t": 7,
+   "wl": 6.7,
+   "driv": 3
+  },
+  {
+   "criteria": "Delay",
+   "t": 8,
+   "wl": 6,
+   "driv": 3
+  },
+  {
+   "criteria": "Jerks",
+   "t": 6.7,
+   "wl": 6.4,
+   "driv": 3
+  }
+ ],
+ "Manual Start": [
+  {
+   "criteria": "Surge",
+   "t": 6.7,
+   "wl": 5.6,
+   "driv": 1
+  },
+  {
+   "criteria": "Acceleration disturbances",
+   "t": 6.8,
+   "wl": 5,
+   "driv": 2
+  },
+  {
+   "criteria": "Acceleration disturbances HF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration disturbances LF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Engine speed overshoot",
+   "t": 9.2,
+   "wl": 7.9,
+   "driv": 3
+  },
+  {
+   "criteria": "Engine speed stumble",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Engine speed undershoot",
+   "t": 7.9,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Idle stabilization duration",
+   "t": 8.5,
+   "wl": 7.5,
+   "driv": 3
+  },
+  {
+   "criteria": "Speed pickup duration",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Start duration",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Starter response delay",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Starter speed",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  }
+ ],
+ "Manual stop": [
+  {
+   "criteria": "Surge",
+   "t": 7.7,
+   "wl": 5.6,
+   "driv": 1
+  },
+  {
+   "criteria": "Acceleration disturbances",
+   "t": 7,
+   "wl": 5.6,
+   "driv": 2
+  },
+  {
+   "criteria": "Acceleration disturbances HF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration disturbances LF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Duration",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  }
+ ],
+ "Power-on downshift": [
+  {
+   "criteria": "Ax gradients after ratio change",
+   "t": 7.4,
+   "wl": 7,
+   "driv": 1
+  },
+  {
+   "criteria": "Kick",
+   "t": 7.3,
+   "wl": 6.9,
+   "driv": 1
+  },
+  {
+   "criteria": "Shock",
+   "t": 7,
+   "wl": 6.2,
+   "driv": 1
+  },
+  {
+   "criteria": "Acceleration disturbances",
+   "t": 7.1,
+   "wl": 6.5,
+   "driv": 2
+  },
+  {
+   "criteria": "Ax gradients during ratio change",
+   "t": 7.8,
+   "wl": 7.4,
+   "driv": 2
+  },
+  {
+   "criteria": "Traction reduction",
+   "t": 7.4,
+   "wl": 6.2,
+   "driv": 2
+  },
+  {
+   "criteria": "Acceleration disturbances HF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration disturbances LF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Jerks",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Shift characteristic",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Shift delay",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Shift duration",
+   "t": 7.7,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Speed decrease",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Speed increase",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Steadiness",
+   "t": 7.2,
+   "wl": 6.2,
+   "driv": 3
+  }
+ ],
+ "Power-on upshift": [
+  {
+   "criteria": "Ax gradients before ratio change",
+   "t": 7.3,
+   "wl": 6.3,
+   "driv": 1
+  },
+  {
+   "criteria": "Ax gradients during ratio change",
+   "t": 7.3,
+   "wl": 6.5,
+   "driv": 1
+  },
+  {
+   "criteria": "Jerks",
+   "t": 6.5,
+   "wl": 6.1,
+   "driv": 1
+  },
+  {
+   "criteria": "Kick",
+   "t": 7.1,
+   "wl": 6,
+   "driv": 1
+  },
+  {
+   "criteria": "Shock",
+   "t": 7,
+   "wl": 5.9,
+   "driv": 1
+  },
+  {
+   "criteria": "Acceleration disturbances",
+   "t": 7.3,
+   "wl": 5.9,
+   "driv": 2
+  },
+  {
+   "criteria": "Traction reduction",
+   "t": 7.7,
+   "wl": 6.3,
+   "driv": 2
+  },
+  {
+   "criteria": "Acceleration disturbances HF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration disturbances LF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Shift delay",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Shift duration",
+   "t": 8.2,
+   "wl": 7.3,
+   "driv": 3
+  },
+  {
+   "criteria": "Speed decrease",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Steadiness",
+   "t": 7.15,
+   "wl": 5.8,
+   "driv": 3
+  }
+ ],
+ "Power-on upshift Cold": [
+  {
+   "criteria": "Ax gradients before ratio change",
+   "t": 7.3,
+   "wl": 6.3,
+   "driv": 1
+  },
+  {
+   "criteria": "Ax gradients during ratio change",
+   "t": 7.3,
+   "wl": 6.5,
+   "driv": 1
+  },
+  {
+   "criteria": "Jerks",
+   "t": 6.5,
+   "wl": 6.1,
+   "driv": 1
+  },
+  {
+   "criteria": "Kick",
+   "t": 7.1,
+   "wl": 6,
+   "driv": 1
+  },
+  {
+   "criteria": "Shock",
+   "t": 7,
+   "wl": 5.9,
+   "driv": 1
+  },
+  {
+   "criteria": "Acceleration disturbances",
+   "t": 7.3,
+   "wl": 5.9,
+   "driv": 2
+  },
+  {
+   "criteria": "Traction reduction",
+   "t": 7.7,
+   "wl": 6.3,
+   "driv": 2
+  },
+  {
+   "criteria": "Acceleration disturbances HF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration disturbances LF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Shift delay",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Shift duration",
+   "t": 8.2,
+   "wl": 7.3,
+   "driv": 3
+  },
+  {
+   "criteria": "Speed decrease",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Steadiness",
+   "t": 7.15,
+   "wl": 5.8,
+   "driv": 3
+  }
+ ],
+ "Sailing Exit": [
+  {
+   "criteria": "Kick",
+   "t": 8,
+   "wl": 7,
+   "driv": 1
+  },
+  {
+   "criteria": "Shock",
+   "t": 7,
+   "wl": 6,
+   "driv": 1
+  },
+  {
+   "criteria": "Acceleration disturbances",
+   "t": 8,
+   "wl": 7,
+   "driv": 2
+  },
+  {
+   "criteria": "Engine speed overshoot",
+   "t": 8,
+   "wl": 7,
+   "driv": 2
+  },
+  {
+   "criteria": "Acceleration disturbances HF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration disturbances LF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Jerks",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Speed increase delay",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Speed pickup duration",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Surge",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  }
+ ],
+ "Tip in at constant speed": [
+  {
+   "criteria": "Kick",
+   "t": 7.5,
+   "wl": 6.5,
+   "driv": 1
+  },
+  {
+   "criteria": "Stumble",
+   "t": 7.3,
+   "wl": 6,
+   "driv": 1
+  },
+  {
+   "criteria": "Acceleration disturbances",
+   "t": 7.8,
+   "wl": 6.8,
+   "driv": 2
+  },
+  {
+   "criteria": "Bump",
+   "t": 7.4,
+   "wl": 6.7,
+   "driv": 2
+  },
+  {
+   "criteria": "Jerks",
+   "t": 7.6,
+   "wl": 6.8,
+   "driv": 2
+  },
+  {
+   "criteria": "Torque smoothness",
+   "t": 8,
+   "wl": 7.2,
+   "driv": 2
+  },
+  {
+   "criteria": "Absolute torque",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration disturbances HF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration disturbances LF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Agility",
+   "t": 7.1,
+   "wl": 6.6,
+   "driv": 3
+  },
+  {
+   "criteria": "Ax increase",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Flare",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Response delay",
+   "t": 7.4,
+   "wl": 6.7,
+   "driv": 3
+  },
+  {
+   "criteria": "Steadiness",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Torque build-up",
+   "t": 6.5,
+   "wl": 5.7,
+   "driv": 3
+  }
+ ],
+ "Tip in at deceleration": [
+  {
+   "criteria": "Kick",
+   "t": 7.6,
+   "wl": 6.5,
+   "driv": 1
+  },
+  {
+   "criteria": "Stumble",
+   "t": 7.3,
+   "wl": 6,
+   "driv": 1
+  },
+  {
+   "criteria": "Acceleration disturbances",
+   "t": 8,
+   "wl": 6.8,
+   "driv": 2
+  },
+  {
+   "criteria": "Bump",
+   "t": 7.4,
+   "wl": 6.7,
+   "driv": 2
+  },
+  {
+   "criteria": "Jerks",
+   "t": 7.8,
+   "wl": 6.8,
+   "driv": 2
+  },
+  {
+   "criteria": "Torque smoothness",
+   "t": 8.2,
+   "wl": 7.4,
+   "driv": 2
+  },
+  {
+   "criteria": "Absolute torque",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration disturbances HF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration disturbances LF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Agility",
+   "t": 7.4,
+   "wl": 6.9,
+   "driv": 3
+  },
+  {
+   "criteria": "Ax increase",
+   "t": 6.5,
+   "wl": 5.7,
+   "driv": 3
+  },
+  {
+   "criteria": "Flare",
+   "t": 8,
+   "wl": 7.2,
+   "driv": 3
+  },
+  {
+   "criteria": "Response delay",
+   "t": 7.5,
+   "wl": 6.8,
+   "driv": 3
+  },
+  {
+   "criteria": "Steadiness",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Torque build-up",
+   "t": 6.7,
+   "wl": 6,
+   "driv": 3
+  }
+ ],
+ "Tip out after acceleration": [
+  {
+   "criteria": "Acceleration disturbances",
+   "t": 8.2,
+   "wl": 6.8,
+   "driv": 1
+  },
+  {
+   "criteria": "Jerks",
+   "t": 8,
+   "wl": 7.3,
+   "driv": 1
+  },
+  {
+   "criteria": "Kick",
+   "t": 8.3,
+   "wl": 7.2,
+   "driv": 1
+  },
+  {
+   "criteria": "Acceleration overshoot",
+   "t": 8,
+   "wl": 7.5,
+   "driv": 2
+  },
+  {
+   "criteria": "Bump",
+   "t": 7.7,
+   "wl": 6.7,
+   "driv": 2
+  },
+  {
+   "criteria": "Acceleration disturbances HF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration disturbances LF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Response delay",
+   "t": 7.6,
+   "wl": 6.7,
+   "driv": 3
+  },
+  {
+   "criteria": "Steadiness",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  }
+ ],
+ "Tip out at constant speed": [
+  {
+   "criteria": "Acceleration disturbances",
+   "t": 8.2,
+   "wl": 6.8,
+   "driv": 1
+  },
+  {
+   "criteria": "Jerks",
+   "t": 8,
+   "wl": 7.3,
+   "driv": 1
+  },
+  {
+   "criteria": "Kick",
+   "t": 8.3,
+   "wl": 7.1,
+   "driv": 1
+  },
+  {
+   "criteria": "Acceleration overshoot",
+   "t": 8,
+   "wl": 7.5,
+   "driv": 2
+  },
+  {
+   "criteria": "Bump",
+   "t": 7.7,
+   "wl": 6.7,
+   "driv": 2
+  },
+  {
+   "criteria": "Acceleration disturbances HF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration disturbances LF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Response delay",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Steadiness",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  }
+ ],
+ "Tip out upshift": [
+  {
+   "criteria": "Deceleration characteristic",
+   "t": 8,
+   "wl": 7.4,
+   "driv": 1
+  },
+  {
+   "criteria": "Jerks",
+   "t": 7.1,
+   "wl": 6.3,
+   "driv": 1
+  },
+  {
+   "criteria": "Kick",
+   "t": 7.3,
+   "wl": 6.4,
+   "driv": 1
+  },
+  {
+   "criteria": "Shock",
+   "t": 7.4,
+   "wl": 6.8,
+   "driv": 1
+  },
+  {
+   "criteria": "Acceleration disturbances",
+   "t": 7,
+   "wl": 6.3,
+   "driv": 2
+  },
+  {
+   "criteria": "Steadiness",
+   "t": 7.2,
+   "wl": 6.2,
+   "driv": 2
+  },
+  {
+   "criteria": "Acceleration disturbances HF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration disturbances LF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Decel. characteristic",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Shift delay",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Shift duration",
+   "t": 8,
+   "wl": 7.7,
+   "driv": 3
+  },
+  {
+   "criteria": "Speed decrease",
+   "t": 7,
+   "wl": 6.7,
+   "driv": 3
+  },
+  {
+   "criteria": "Traction reduction",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  }
+ ],
+ "Accel Cst Load": [
+  {
+   "criteria": "Acceleration steps",
+   "t": 7.5,
+   "wl": 6.9,
+   "driv": 1
+  },
+  {
+   "criteria": "Acceleration disturbances LF",
+   "t": 7,
+   "wl": 5,
+   "driv": 2
+  },
+  {
+   "criteria": "Surge",
+   "t": 6.5,
+   "wl": 5,
+   "driv": 2
+  },
+  {
+   "criteria": "Acceleration disturbances",
+   "t": 6,
+   "wl": 5.4,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration disturbances HF",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Expected acceleration",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Pedal map",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Reference acceleration",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  }
+ ],
+ "Accel Cst Load - Cold": [
+  {
+   "criteria": "Acceleration steps",
+   "t": 7.5,
+   "wl": 6.9,
+   "driv": 1
+  },
+  {
+   "criteria": "Acceleration disturbances LF",
+   "t": 7,
+   "wl": 5,
+   "driv": 2
+  },
+  {
+   "criteria": "Surge",
+   "t": 6.5,
+   "wl": 5,
+   "driv": 2
+  },
+  {
+   "criteria": "Acceleration disturbances",
+   "t": 6,
+   "wl": 5.4,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration disturbances HF",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Expected acceleration",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Pedal map",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Reference acceleration",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  }
+ ],
+ "Accel Load Decrease": [
+  {
+   "criteria": "Acceleration disturbances",
+   "t": 7.5,
+   "wl": 5.3,
+   "driv": 2
+  },
+  {
+   "criteria": "Acceleration disturbances HF",
+   "t": 7,
+   "wl": 5,
+   "driv": 2
+  },
+  {
+   "criteria": "Acceleration disturbances LF",
+   "t": 7.7,
+   "wl": 5.4,
+   "driv": 2
+  },
+  {
+   "criteria": "Correlation",
+   "t": 6.9,
+   "wl": 5.3,
+   "driv": 2
+  },
+  {
+   "criteria": "Surge",
+   "t": 7.5,
+   "wl": 6.9,
+   "driv": 2
+  },
+  {
+   "criteria": "Expected acceleration",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Reference acceleration",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  }
+ ],
+ "Accel Load Increase": [
+  {
+   "criteria": "Acceleration disturbances",
+   "t": 7.4,
+   "wl": 6,
+   "driv": 2
+  },
+  {
+   "criteria": "Acceleration disturbances HF",
+   "t": 7.4,
+   "wl": 5,
+   "driv": 2
+  },
+  {
+   "criteria": "Acceleration disturbances LF",
+   "t": 7.6,
+   "wl": 6,
+   "driv": 2
+  },
+  {
+   "criteria": "Correlation",
+   "t": 6.5,
+   "wl": 6,
+   "driv": 2
+  },
+  {
+   "criteria": "Surge",
+   "t": 7.4,
+   "wl": 6.6,
+   "driv": 2
+  },
+  {
+   "criteria": "Expected acceleration",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Reference acceleration",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Torque response",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  }
+ ],
+ "Cst Speed Cst Load": [
+  {
+   "criteria": "Acceleration disturbances LF",
+   "t": 6.4,
+   "wl": 5,
+   "driv": 2
+  },
+  {
+   "criteria": "Correlation",
+   "t": 8,
+   "wl": 5.5,
+   "driv": 2
+  },
+  {
+   "criteria": "Surge",
+   "t": 6.9,
+   "wl": 5.7,
+   "driv": 2
+  },
+  {
+   "criteria": "Acceleration disturbances",
+   "t": 6.5,
+   "wl": 5.2,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration disturbances HF",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Engine speed fluctuations",
+   "t": 7.4,
+   "wl": 6,
+   "driv": 3
+  }
+ ],
+ "Cst Speed Cst Load - Cold": [
+  {
+   "criteria": "Acceleration disturbances LF",
+   "t": 6.4,
+   "wl": 5,
+   "driv": 2
+  },
+  {
+   "criteria": "Correlation",
+   "t": 8,
+   "wl": 5.5,
+   "driv": 2
+  },
+  {
+   "criteria": "Surge",
+   "t": 6.9,
+   "wl": 5.7,
+   "driv": 2
+  },
+  {
+   "criteria": "Acceleration disturbances",
+   "t": 6.5,
+   "wl": 5.2,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration disturbances HF",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Engine speed fluctuations",
+   "t": 7.4,
+   "wl": 6,
+   "driv": 3
+  }
+ ],
+ "Cst Speed Without Load": [
+  {
+   "criteria": "Acceleration disturbances LF",
+   "t": 6.4,
+   "wl": 5,
+   "driv": 2
+  },
+  {
+   "criteria": "Correlation",
+   "t": 8,
+   "wl": 5.5,
+   "driv": 2
+  },
+  {
+   "criteria": "Surge",
+   "t": 6.9,
+   "wl": 5.7,
+   "driv": 2
+  },
+  {
+   "criteria": "Acceleration disturbances",
+   "t": 6.5,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration disturbances HF",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Engine speed fluctuations",
+   "t": 6.5,
+   "wl": 6,
+   "driv": 3
+  },
+  {
+   "criteria": "Vehicle speed crit",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  }
+ ],
+ "Cst Speed Without Load - Cold": [
+  {
+   "criteria": "Acceleration disturbances LF",
+   "t": 6.4,
+   "wl": 5,
+   "driv": 2
+  },
+  {
+   "criteria": "Correlation",
+   "t": 8,
+   "wl": 5.5,
+   "driv": 2
+  },
+  {
+   "criteria": "Surge",
+   "t": 6.9,
+   "wl": 5.7,
+   "driv": 2
+  },
+  {
+   "criteria": "Acceleration disturbances",
+   "t": 6.5,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration disturbances HF",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Engine speed fluctuations",
+   "t": 6.5,
+   "wl": 6,
+   "driv": 3
+  },
+  {
+   "criteria": "Vehicle speed crit",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  }
+ ],
+ "Cylinder Deactivation": [
+  {
+   "criteria": "Engine speed change",
+   "t": 8,
+   "wl": 7.5,
+   "driv": 1
+  },
+  {
+   "criteria": "Steadiness",
+   "t": 8,
+   "wl": 7.5,
+   "driv": 1
+  },
+  {
+   "criteria": "Acceleration disturbances",
+   "t": 7.2,
+   "wl": 6.3,
+   "driv": 2
+  },
+  {
+   "criteria": "Acceleration disturbances LF",
+   "t": 7,
+   "wl": 5,
+   "driv": 2
+  },
+  {
+   "criteria": "Acceleration disturbances HF",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  }
+ ],
+ "Cylinder Deactivation - Cold": [
+  {
+   "criteria": "Engine speed change",
+   "t": 8,
+   "wl": 7.5,
+   "driv": 1
+  },
+  {
+   "criteria": "Steadiness",
+   "t": 8,
+   "wl": 7.5,
+   "driv": 1
+  },
+  {
+   "criteria": "Acceleration disturbances",
+   "t": 7.2,
+   "wl": 6.3,
+   "driv": 2
+  },
+  {
+   "criteria": "Acceleration disturbances LF",
+   "t": 7,
+   "wl": 5,
+   "driv": 2
+  },
+  {
+   "criteria": "Acceleration disturbances HF",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  }
+ ],
+ "Cylinder reactivation": [
+  {
+   "criteria": "Engine speed change",
+   "t": 8,
+   "wl": 7.5,
+   "driv": 1
+  },
+  {
+   "criteria": "Steadiness",
+   "t": 8,
+   "wl": 7.5,
+   "driv": 1
+  },
+  {
+   "criteria": "Acceleration disturbances",
+   "t": 6.6,
+   "wl": 6,
+   "driv": 2
+  },
+  {
+   "criteria": "Acceleration disturbances LF",
+   "t": 7,
+   "wl": 5.5,
+   "driv": 2
+  },
+  {
+   "criteria": "Acceleration disturbances HF",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  }
+ ],
+ "Cylinder reactivation - Cold": [
+  {
+   "criteria": "Engine speed change",
+   "t": 8,
+   "wl": 7.5,
+   "driv": 1
+  },
+  {
+   "criteria": "Steadiness",
+   "t": 8,
+   "wl": 7.5,
+   "driv": 1
+  },
+  {
+   "criteria": "Acceleration disturbances",
+   "t": 6.6,
+   "wl": 6,
+   "driv": 2
+  },
+  {
+   "criteria": "Acceleration disturbances LF",
+   "t": 7,
+   "wl": 5.5,
+   "driv": 2
+  },
+  {
+   "criteria": "Acceleration disturbances HF",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  }
+ ],
+ "DASS Eng On - Cold": [
+  {
+   "criteria": "Shock",
+   "t": 7.3,
+   "wl": 6.3,
+   "driv": 1
+  },
+  {
+   "criteria": "Acceleration disturbances",
+   "t": 7.3,
+   "wl": 4.7,
+   "driv": 2
+  },
+  {
+   "criteria": "Acceleration peak",
+   "t": 7.2,
+   "wl": 6.3,
+   "driv": 2
+  },
+  {
+   "criteria": "Bump",
+   "t": 7.4,
+   "wl": 6.6,
+   "driv": 2
+  },
+  {
+   "criteria": "Engagement steadiness",
+   "t": 7.9,
+   "wl": 7,
+   "driv": 2
+  },
+  {
+   "criteria": "Stumble",
+   "t": 7.4,
+   "wl": 5.2,
+   "driv": 2
+  },
+  {
+   "criteria": "Acceleration disturbances HF",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration disturbances LF",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration performance",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Agility",
+   "t": 7.6,
+   "wl": 6.7,
+   "driv": 3
+  },
+  {
+   "criteria": "Brake release bump",
+   "t": 7.7,
+   "wl": 6.7,
+   "driv": 3
+  },
+  {
+   "criteria": "Brake release delay",
+   "t": 7.8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Brake release surge",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Engine speed overshoot",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Jerks",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Response delay",
+   "t": 7.2,
+   "wl": 5.3,
+   "driv": 3
+  }
+ ],
+ "Decel - Trans to Cst Spd - Cold": [
+  {
+   "criteria": "Engine speed undershoot",
+   "t": 8,
+   "wl": 7.6,
+   "driv": 1
+  },
+  {
+   "criteria": "Transition shock",
+   "t": 8,
+   "wl": 6.7,
+   "driv": 1
+  },
+  {
+   "criteria": "Transition surge",
+   "t": 8,
+   "wl": 7.4,
+   "driv": 1
+  },
+  {
+   "criteria": "Acceleration disturbances",
+   "t": 6.6,
+   "wl": 6,
+   "driv": 2
+  },
+  {
+   "criteria": "Acceleration disturbances HF",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration disturbances LF",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Idle stabilization duration",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  }
+ ],
+ "Decel Cst Brake": [
+  {
+   "criteria": "Acceleration steps",
+   "t": 7,
+   "wl": 5,
+   "driv": 1
+  },
+  {
+   "criteria": "Acceleration disturbances",
+   "t": 6.7,
+   "wl": 5,
+   "driv": 2
+  },
+  {
+   "criteria": "Surge",
+   "t": 7,
+   "wl": 5,
+   "driv": 2
+  },
+  {
+   "criteria": "Acceleration disturbances HF",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration disturbances LF",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  }
+ ],
+ "Decel Cst Brake - Cold": [
+  {
+   "criteria": "Acceleration steps",
+   "t": 7,
+   "wl": 5,
+   "driv": 1
+  },
+  {
+   "criteria": "Acceleration disturbances",
+   "t": 6.7,
+   "wl": 5,
+   "driv": 2
+  },
+  {
+   "criteria": "Surge",
+   "t": 7,
+   "wl": 5,
+   "driv": 2
+  },
+  {
+   "criteria": "Acceleration disturbances HF",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration disturbances LF",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  }
+ ],
+ "Decel Trans to Cst Spd": [
+  {
+   "criteria": "Acceleration disturbances LF",
+   "t": 7.2,
+   "wl": 5,
+   "driv": 1
+  },
+  {
+   "criteria": "Engine speed undershoot",
+   "t": 8,
+   "wl": 7.6,
+   "driv": 1
+  },
+  {
+   "criteria": "Transition shock",
+   "t": 8,
+   "wl": 6.7,
+   "driv": 1
+  },
+  {
+   "criteria": "Transition surge",
+   "t": 8,
+   "wl": 7.4,
+   "driv": 1
+  },
+  {
+   "criteria": "Acceleration disturbances",
+   "t": 6.6,
+   "wl": 6,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration disturbances HF",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Idle stabilization duration",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  }
+ ],
+ "Decel Without Brake": [
+  {
+   "criteria": "Acceleration disturbances LF",
+   "t": 6.4,
+   "wl": 5,
+   "driv": 1
+  },
+  {
+   "criteria": "Acceleration steps",
+   "t": 8,
+   "wl": 7,
+   "driv": 1
+  },
+  {
+   "criteria": "Acceleration disturbances",
+   "t": 6.5,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration disturbances HF",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Expected deceleration stronger",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Expected deceleration weaker",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Reference deceleration stronger",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Reference deceleration weaker",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Surge",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  }
+ ],
+ "Decel Without Brake - Cold": [
+  {
+   "criteria": "Acceleration disturbances LF",
+   "t": 6.4,
+   "wl": 5,
+   "driv": 1
+  },
+  {
+   "criteria": "Acceleration steps",
+   "t": 8,
+   "wl": 7,
+   "driv": 1
+  },
+  {
+   "criteria": "Acceleration disturbances",
+   "t": 6.5,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration disturbances HF",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Expected deceleration stronger",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Expected deceleration weaker",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Reference deceleration stronger",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Reference deceleration weaker",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Surge",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  }
+ ],
+ "Drive Away Creep Eng On": [
+  {
+   "criteria": "Acceleration disturbances",
+   "t": 7.1,
+   "wl": 5.8,
+   "driv": 1
+  },
+  {
+   "criteria": "Brake release bump",
+   "t": 7.5,
+   "wl": 5.8,
+   "driv": 1
+  },
+  {
+   "criteria": "Engagement shock",
+   "t": 6.1,
+   "wl": 5,
+   "driv": 1
+  },
+  {
+   "criteria": "Jerks",
+   "t": 6,
+   "wl": 5.2,
+   "driv": 1
+  },
+  {
+   "criteria": "Clutch grabbing",
+   "t": 6.7,
+   "wl": 5.7,
+   "driv": 2
+  },
+  {
+   "criteria": "Engagement point",
+   "t": 7.7,
+   "wl": 7.2,
+   "driv": 2
+  },
+  {
+   "criteria": "Acceleration disturbances HF",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration disturbances LF",
+   "t": 7.8,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Brake release delay",
+   "t": 7.1,
+   "wl": 5.9,
+   "driv": 3
+  },
+  {
+   "criteria": "Brake release surge",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Engine speed drop",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Stall sensitivity",
+   "t": 8,
+   "wl": 7.7,
+   "driv": 3
+  }
+ ],
+ "Drive Away Creep Eng On - Cold": [
+  {
+   "criteria": "Acceleration disturbances",
+   "t": 7.6,
+   "wl": 5.8,
+   "driv": 1
+  },
+  {
+   "criteria": "Brake release bump",
+   "t": 7.5,
+   "wl": 5.8,
+   "driv": 1
+  },
+  {
+   "criteria": "Engagement shock",
+   "t": 6.1,
+   "wl": 5,
+   "driv": 1
+  },
+  {
+   "criteria": "Jerks",
+   "t": 6,
+   "wl": 5.2,
+   "driv": 1
+  },
+  {
+   "criteria": "Clutch grabbing",
+   "t": 6.7,
+   "wl": 5.7,
+   "driv": 2
+  },
+  {
+   "criteria": "Engagement point",
+   "t": 7.7,
+   "wl": 7.2,
+   "driv": 2
+  },
+  {
+   "criteria": "Acceleration disturbances HF",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration disturbances LF",
+   "t": 7.8,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Brake release delay",
+   "t": 7.1,
+   "wl": 5.9,
+   "driv": 3
+  },
+  {
+   "criteria": "Brake release surge",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Engine speed drop",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Stall sensitivity",
+   "t": 8,
+   "wl": 7.7,
+   "driv": 3
+  }
+ ],
+ "Idle Air Cond On-Off": [
+  {
+   "criteria": "Engine speed drift",
+   "t": 7.6,
+   "wl": 5.1,
+   "driv": 1
+  },
+  {
+   "criteria": "Acceleration disturbances",
+   "t": 6.9,
+   "wl": 5.5,
+   "driv": 2
+  },
+  {
+   "criteria": "Acceleration disturbances HF",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration disturbances LF",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Engine speed fluctuations",
+   "t": 8,
+   "wl": 6.1,
+   "driv": 3
+  },
+  {
+   "criteria": "Engine speed overshoot",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Engine speed undershoot",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Idle stabilization duration",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  }
+ ],
+ "Idle Air Cond On-Off - Cold": [
+  {
+   "criteria": "Engine speed drift",
+   "t": 7.6,
+   "wl": 5.1,
+   "driv": 1
+  },
+  {
+   "criteria": "Acceleration disturbances",
+   "t": 6.9,
+   "wl": 5.5,
+   "driv": 2
+  },
+  {
+   "criteria": "Acceleration disturbances HF",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration disturbances LF",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Engine speed fluctuations",
+   "t": 8,
+   "wl": 6.1,
+   "driv": 3
+  },
+  {
+   "criteria": "Engine speed overshoot",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Engine speed undershoot",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Idle stabilization duration",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  }
+ ],
+ "Idle Vehicle Stationary": [
+  {
+   "criteria": "Engine speed drift",
+   "t": 7.6,
+   "wl": 5.1,
+   "driv": 1
+  },
+  {
+   "criteria": "Acceleration disturbances",
+   "t": 6.9,
+   "wl": 5.2,
+   "driv": 2
+  },
+  {
+   "criteria": "Acceleration disturbances HF",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration disturbances LF",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Combustion quality",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Cylinder balance",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Engine speed fluctuations",
+   "t": 7.6,
+   "wl": 6.1,
+   "driv": 3
+  },
+  {
+   "criteria": "Idle speed",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Surge",
+   "t": 8.1,
+   "wl": 7.2,
+   "driv": 3
+  }
+ ],
+ "Idle Vehicle Stationary - Cold": [
+  {
+   "criteria": "Engine speed drift",
+   "t": 7.6,
+   "wl": 5.1,
+   "driv": 1
+  },
+  {
+   "criteria": "Acceleration disturbances",
+   "t": 6.9,
+   "wl": 5.2,
+   "driv": 2
+  },
+  {
+   "criteria": "Acceleration disturbances HF",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration disturbances LF",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Combustion quality",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Cylinder balance",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Engine speed fluctuations",
+   "t": 7.6,
+   "wl": 6.1,
+   "driv": 3
+  },
+  {
+   "criteria": "Idle speed",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Surge",
+   "t": 8.1,
+   "wl": 7.2,
+   "driv": 3
+  }
+ ],
+ "Maneuvering - Cold": [
+  {
+   "criteria": "Acceleration disturbances",
+   "t": 8.3,
+   "wl": 6.1,
+   "driv": 1
+  },
+  {
+   "criteria": "Acceleration disturbances LF",
+   "t": 8.6,
+   "wl": 5,
+   "driv": 1
+  },
+  {
+   "criteria": "Jerks",
+   "t": 6.7,
+   "wl": 6.4,
+   "driv": 1
+  },
+  {
+   "criteria": "Acceleration disturbances HF",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Bump",
+   "t": 7,
+   "wl": 6.7,
+   "driv": 3
+  },
+  {
+   "criteria": "Delay",
+   "t": 7.6,
+   "wl": 6,
+   "driv": 3
+  }
+ ],
+ "Maneuvering with throttle": [
+  {
+   "criteria": "Acceleration disturbances",
+   "t": 6.9,
+   "wl": 5.5,
+   "driv": 1
+  },
+  {
+   "criteria": "Acceleration disturbances LF",
+   "t": 7,
+   "wl": 5,
+   "driv": 1
+  },
+  {
+   "criteria": "Jerks",
+   "t": 6.8,
+   "wl": 6,
+   "driv": 1
+  },
+  {
+   "criteria": "Acceleration disturbances HF",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Bump",
+   "t": 7,
+   "wl": 6.7,
+   "driv": 3
+  },
+  {
+   "criteria": "Delay",
+   "t": 7.6,
+   "wl": 6,
+   "driv": 3
+  }
+ ],
+ "Shift Abort": [
+  {
+   "criteria": "Acceleration disturbances",
+   "t": 8,
+   "wl": 7,
+   "driv": 2
+  },
+  {
+   "criteria": "Steadiness",
+   "t": 8,
+   "wl": 7,
+   "driv": 2
+  },
+  {
+   "criteria": "Acceleration disturbances HF",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration disturbances LF",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Shift duration",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  }
+ ],
+ "Vehicle Stop": [
+  {
+   "criteria": "Acceleration decrease",
+   "t": 7.3,
+   "wl": 7,
+   "driv": 1
+  },
+  {
+   "criteria": "Acceleration disturbances LF",
+   "t": 6.6,
+   "wl": 5,
+   "driv": 1
+  },
+  {
+   "criteria": "Acceleration increase",
+   "t": 7.2,
+   "wl": 5.9,
+   "driv": 1
+  },
+  {
+   "criteria": "Engine speed overshoot",
+   "t": 7.6,
+   "wl": 6.5,
+   "driv": 1
+  },
+  {
+   "criteria": "Engine speed undershoot",
+   "t": 7.7,
+   "wl": 7,
+   "driv": 1
+  },
+  {
+   "criteria": "Acceleration disturbances",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration disturbances HF",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Engine speed fluctuations",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  }
+ ],
+ "Vehicle Stop - Cold": [
+  {
+   "criteria": "Acceleration decrease",
+   "t": 7.3,
+   "wl": 7,
+   "driv": 1
+  },
+  {
+   "criteria": "Acceleration disturbances LF",
+   "t": 6.6,
+   "wl": 5,
+   "driv": 1
+  },
+  {
+   "criteria": "Acceleration increase",
+   "t": 7.2,
+   "wl": 5.9,
+   "driv": 1
+  },
+  {
+   "criteria": "Engine speed overshoot",
+   "t": 7.6,
+   "wl": 6.5,
+   "driv": 1
+  },
+  {
+   "criteria": "Engine speed undershoot",
+   "t": 7.7,
+   "wl": 7,
+   "driv": 1
+  },
+  {
+   "criteria": "Acceleration disturbances",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration disturbances HF",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  },
+  {
+   "criteria": "Engine speed fluctuations",
+   "t": 7,
+   "wl": 5,
+   "driv": 3
+  }
+ ],
+ "Maneuvering at creep speed": [
+  {
+   "criteria": "Acceleration disturbances",
+   "t": 8.3,
+   "wl": 6.7,
+   "driv": 1
+  },
+  {
+   "criteria": "Acceleration disturbances HF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Acceleration disturbances LF",
+   "t": 8,
+   "wl": 7,
+   "driv": 3
+  },
+  {
+   "criteria": "Bump",
+   "t": 7,
+   "wl": 6.7,
+   "driv": 3
+  },
+  {
+   "criteria": "Delay",
+   "t": 8,
+   "wl": 6,
+   "driv": 3
+  },
+  {
+   "criteria": "Jerks",
+   "t": 6.7,
+   "wl": 6.4,
+   "driv": 3
+  }
+ ]
+}

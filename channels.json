@@ -1,0 +1,172 @@
+{
+  "_comment": "Canonical drivability signals -> ordered list of candidate name patterns (regex, case-insensitive). First match in the file wins. Edit/extend per OEM or program. 'unit_g' channels are auto-converted to m/s^2.",
+  "signals": {
+    "ax_filt": {
+      "patterns": [
+        "^Accel_Filt_X$",
+        "AccelerationChassisComp",
+        "accel.*long.*filt",
+        "^ax_filt",
+        "longitudinal.*accel.*filt"
+      ],
+      "unit_g": true,
+      "role": "Longitudinal acceleration (filtered)"
+    },
+    "ax_raw": {
+      "patterns": [
+        "^Accel_Raw_X$",
+        "^Accel_Raw_CA$",
+        "accel.*long.*raw",
+        "^ax_raw"
+      ],
+      "unit_g": true,
+      "role": "Longitudinal acceleration (raw)"
+    },
+    "az_raw": {
+      "patterns": [
+        "^Accel_Raw_Z$",
+        "vertical.*accel",
+        "accel.*z.*raw"
+      ],
+      "unit_g": true,
+      "role": "Vertical acceleration (ride)"
+    },
+    "engine_speed": {
+      "patterns": [
+        "^EngineSpeed_W$",
+        "^EngineSpeed$",
+        "CmbEngSpd.n_CE",
+        "\\bn_Eng\\b",
+        "engine.*speed"
+      ],
+      "unit_g": false,
+      "role": "Engine speed"
+    },
+    "turbine_speed": {
+      "patterns": [
+        "^TurbineSpeed$",
+        "Conv_nTrbn",
+        "turbine.*speed"
+      ],
+      "unit_g": false,
+      "role": "Turbine speed"
+    },
+    "vehicle_speed": {
+      "patterns": [
+        "^VehicleSpeedVSOSig$",
+        "^VehicleSpeed$",
+        "REF_VEH_SPEED",
+        "vehicle.*speed$"
+      ],
+      "unit_g": false,
+      "role": "Vehicle speed"
+    },
+    "pedal": {
+      "patterns": [
+        "^GasPedalPosition_W$",
+        "GasPedalPosition",
+        "AccelPdlPosn",
+        "accped.*posn",
+        "^Pedal$",
+        "accelerator.*pedal"
+      ],
+      "unit_g": false,
+      "role": "Accelerator pedal"
+    },
+    "gear_act": {
+      "patterns": [
+        "st_GearAct$",
+        "^GearEngaged$",
+        "ActualGear",
+        "^Gear$",
+        "current.*gear"
+      ],
+      "unit_g": false,
+      "role": "Engaged gear (actual)"
+    },
+    "gear_tgt": {
+      "patterns": [
+        "^TargetGear$",
+        "st_GearReq$",
+        "st_GearDesTarGear$",
+        "st_GearTar$",
+        "target.*gear"
+      ],
+      "unit_g": false,
+      "role": "Target gear (requested)"
+    },
+    "eng_trq": {
+      "patterns": [
+        "^ActMod_trqCrS$",
+        "EngineTorque",
+        "trqCrS$",
+        "crank.*torque",
+        "indicated.*torque"
+      ],
+      "unit_g": false,
+      "role": "Engine (crank) torque"
+    },
+    "shift_in_progress": {
+      "patterns": [
+        "^ShiftInProgress$",
+        "f_ShiftInShift$",
+        "shift.*active"
+      ],
+      "unit_g": false,
+      "role": "Shift-in-progress flag"
+    },
+    "tcc": {
+      "patterns": [
+        "^TorqueConverterSts$",
+        "st_TCC_CtrlAct$",
+        "Gbx_stConvClth$",
+        "converter.*clutch"
+      ],
+      "unit_g": false,
+      "role": "Torque-converter clutch state"
+    },
+    "brake": {
+      "patterns": [
+        "^Brake$",
+        "BrakePedal",
+        "BrkTrq_Driver",
+        "brake.*pedal"
+      ],
+      "unit_g": false,
+      "role": "Brake"
+    },
+    "standstill": {
+      "patterns": [
+        "^VehicleStandStillSts$",
+        "standstill",
+        "stand_still",
+        "vehicle.*stop.*sts"
+      ],
+      "unit_g": false,
+      "role": "Vehicle standstill flag"
+    },
+    "stopstart": {
+      "patterns": [
+        "^STOP_START_STAT$",
+        "ACC_StopStart$",
+        "start.?stop.*stat",
+        "stop.?start.*stat",
+        "idle.?stop.*sts"
+      ],
+      "unit_g": false,
+      "role": "Engine stop-start state (ESS)"
+    },
+    "selector": {
+      "patterns": [
+        "^SelectorLever$",
+        "ShiftLeverPosition",
+        "^PRND",
+        "GbxLvr",
+        "gear.?lever",
+        "selector.?lever"
+      ],
+      "unit_g": false,
+      "role": "Selector lever (PRND)"
+    }
+  }
+}

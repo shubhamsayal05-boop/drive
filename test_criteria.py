@@ -25,7 +25,7 @@ def _make_edo(modes: dict) -> bytes:
 def test_avl_hierarchy_load():
     avl = avl_map.catalog()
     assert "modes" in avl
-    assert len(avl["modes"]) >= 20
+    assert len(avl["modes"]) >= 35
     creep = avl_map.enabled_criteria("Drive away", "Creep")
     assert any(c["name"] == "Brake release bump" for c in creep)
 
@@ -34,7 +34,7 @@ def test_event_to_avl_mapping():
     ev = {"type": "kickdown_downshift", "label": "KD"}
     main, sub = avl_map.avl_for(ev)
     assert main == "Gear shift"
-    assert sub == "Tip-in downshift"
+    assert sub == "Kick down / tip in downshift"
 
 
 def test_avl_scorecard():

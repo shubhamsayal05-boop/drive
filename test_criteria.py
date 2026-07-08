@@ -61,6 +61,26 @@ def test_json_targets_load():
     assert "(PT) KD - tip in downshift" in crit
 
 
+def test_standing_start_scorecard():
+    ev = {"type": "drive_away", "label": "Launch"}
+    m = {
+        "launch_ms": 280, "tot_ms": 280, "resp_ms": 280,
+        "ax_peak": 2.8, "ax_mean": 2.1, "posg": 18, "negg": -6,
+        "jerk_peak": 9, "engage_jerk": 9, "neg_jerk": -7,
+        "disturb_pp": 0.35, "linearity_pct": 91, "ax_pp": 0.4, "shock": 0.45,
+        "rpm_start": 850, "rpm_peak": 3200, "rpm_min": 780, "rpm_drop": 120,
+        "pedal_at_launch": 35, "t_to_10kph_ms": 2800, "fs": 4.2,
+    }
+    main, sub, sdv, rows = avl_map.scorecard(ev, m)
+    assert main == "Drive away" and sub == "Standing start"
+    rated = [r for r in rows if r["rating"] is not None]
+    assert len(rated) >= 20, f"expected most standing-start criteria rated, got {len(rated)}/{len(rows)}"
+    names = {r["criteria"] for r in rated}
+    for need in ("Response delay", "Longitudinal acceleration", "Shock", "Stall sensitivity",
+                 "Required pedal position", "Engine speed drop"):
+        assert need in names, need
+
+
 def test_sdv_map_wrapper():
     ev = {"type": "drive_away", "label": "Launch"}
     m = {"launch_ms": 400, "jerk_peak": 10, "ax_peak": 2.5}
@@ -75,5 +95,6 @@ if __name__ == "__main__":
     test_event_to_avl_mapping()
     test_avl_scorecard()
     test_json_targets_load()
+    test_standing_start_scorecard()
     test_sdv_map_wrapper()
     print("criteria tests OK")

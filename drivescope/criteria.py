@@ -141,12 +141,18 @@ ANCHORS = {
                           [(300, 10), (500, 8), (800, 6)]),
     "Duration 0-100 kph": (["t_to_10kph_ms"], "ms", False,
                            [(5000, 10), (7000, 8), (9000, 6), (12000, 3)]),
-    "Engine speed drop": (["rpm_start"], "rpm", False,
-                          [(200, 10), (400, 8), (600, 6), (900, 3)]),
+    "Engine speed drop": (["rpm_drop", "rpm_start"], "rpm", False,
+                          [(0, 10), (200, 7), (400, 4), (600, 0)]),
     "Engine speed overshoot": (["rpm_peak"], "rpm", False,
                                [(300, 10), (500, 8), (800, 6), (1200, 3)]),
     "Ax increase": (["posg"], "m/s²/s", True,
                     [(8, 6), (15, 8), (25, 10), (40, 8)]),
+    "Stall sensitivity": (["rpm_min", "rpm_drop"], "rpm", True,
+                          [(800, 10), (600, 7), (400, 4), (200, 0)]),
+    "Engine stall": (["rpm_min"], "rpm", True,
+                     [(800, 10), (600, 7), (400, 4), (200, 0)]),
+    "Required pedal position": (["pedal_at_launch", "pedal_mean"], "%", False,
+                                [(20, 10), (40, 7), (60, 4), (80, 0)]),
 }
 
 # Aliases for case / punctuation variants in ODRIV exports

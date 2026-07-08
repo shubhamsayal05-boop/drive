@@ -81,6 +81,15 @@
       (nun ? ` · <span style="color:#e3b341">${nun} unresolved: ${result.channels_unresolved.join(", ")}</span>` : ` · <span style="color:#3fce6a">all mapped</span>`));
     root.appendChild(chip);
 
+    if (result.criteria) {
+      const src = (result.criteria.source || "").split("/").pop();
+      let critHtml = `<b>Operation modes criteria:</b> ${src || "bundled"}`;
+      if (result.criteria.warning) {
+        critHtml += ` · <span style="color:#e3b341">${result.criteria.warning}</span>`;
+      }
+      root.appendChild(elH("div", "ds-chan", critHtml));
+    }
+
     if (!result.events.length) {
       const wrap = elH("div", "ds-empty");
       let html = "No drivability events were auto-detected in this recording.";
@@ -179,7 +188,7 @@
       // ---- scorecard + actions ----
       const grid = elH("div", "ds-grid2");
       const sc = elH("div", "ds-sect");
-      sc.appendChild(elH("h3", null, `ODRIV criteria${ev.sdv ? " — " + ev.sdv : ""}`));
+      sc.appendChild(elH("h3", null, `AVL criteria${ev.avl_main ? " — " + ev.avl_main + " / " + ev.avl_sub : (ev.sdv ? " — " + ev.sdv : "")}`));
       const crit = ev.criteria || [];
       if (crit.length) {
         const issueByCrit = {};
@@ -189,15 +198,17 @@
           const meas = c.measured || "<span style='color:#5a6675'>not measured</span>";
           const pill = c.sev === "na"
             ? `<span class="ds-pill na">—</span>`
-            : `<span class="ds-pill ${c.sev}">${c.sev === "meas" ? "MEAS" : c.sev.toUpperCase()}</span>`;
+            : `<span class="ds-pill ${c.sev}">${c.sev.toUpperCase()}</span>`;
           const dr = c.driv ? `<span class="ds-driv">P${c.driv}</span>` : "";
-          rows += `<tr><td>${c.criteria}${dr}</td><td class="num">${c.t ?? "—"}</td><td class="num">${c.wl ?? "—"}</td><td class="num">${meas}</td><td>${pill}</td></tr>`;
+          const main = c.main || ev.avl_main || "";
+          const sub = c.sub || ev.avl_sub || "";
+          rows += `<tr><td class="ds-avl">${main}<br><small>${sub}</small></td><td>${c.criteria}${dr}</td><td class="num">${c.t ?? "—"}</td><td class="num">${c.wl ?? "—"}</td><td class="num">${meas}</td><td>${pill}</td></tr>`;
         });
         const tbl = elH("table", null,
-          `<thead><tr><th>Criterion</th><th class="num">Target</th><th class="num">Warn</th><th class="num">Measured</th><th>Status</th></tr></thead><tbody>${rows}</tbody>`);
+          `<thead><tr><th>Operation mode</th><th>Criterion</th><th class="num">Target</th><th class="num">Warn</th><th class="num">Rating</th><th>Status</th></tr></thead><tbody>${rows}</tbody>`);
         sc.appendChild(tbl);
         sc.appendChild(elH("div", "ds-note",
-          "Target / Warn are ODRIV rating limits (0–10). Measured values are DriveScope physical estimates from the raw signal — shown for orientation, not as AVL ratings."));
+          "Matches AVL-DRIVE Operation modes / Criteria (Main → Sub → Criterion). Only <b>enabled</b> criteria are scored. Target/Warn are program rating limits (0–10)."));
       } else {
         sc.appendChild(elH("div", "ds-empty", "No ODRIV criteria mapped for this SDV."));
       }

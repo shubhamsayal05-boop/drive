@@ -40,12 +40,15 @@ drivescope/
   loader.py        MDF load + resample (handles text/enum channels)
   events.py        event detection & classification
   metrics.py       drivability metrics
+  criteria.py      Operation Modes Criteria rating engine
+  edo_loader.py    .edo / JSON criteria loader
   diagnostics.py   threshold rules -> issues + actions  (tune here)
   engine.py        orchestrator: file -> JSON result
   report.py        standalone offline HTML report (CLI)
   cli.py           command-line interface
   api.py           FastAPI: upload UI + /api/analyze
   config/channels.json   channel-name patterns (edit per program)
+  config/sdv_criteria.json   ODRIV criteria targets (from .edo)
 frontend/
   index.html  styles.css  app.js   (single renderer; used by web app + report)
 ```
@@ -77,6 +80,15 @@ auto-converted g → m/s².
 Severity thresholds and the suggestion text live in `diagnostics.py` (`TH`
 dict + rules). They are intentionally explicit so a calibrator can align them to
 program targets.
+
+**Operation Modes Criteria (`.edo`)** — targets and warn limits per maneuver are
+loaded from `drivescope/config/Operation modes criteria.edo` (ODRIV / AVL-DRIVE
+export) with fallback to `sdv_criteria.json`. DriveScope maps measured signals to
+approximate 0–10 ODRIV ratings and compares them to your program targets. Upload
+a fresh `.edo` via **Criteria (.edo)** on the web UI or `POST /api/criteria`.
+
+If the bundled `.edo` is corrupt or empty, re-export from ODRIV Target Wizard and
+upload the file again.
 
 ## Honest limitations (read before trusting a number)
 

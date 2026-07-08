@@ -1,0 +1,877 @@
+{
+  "_comment": "AVL-DRIVE Operation modes / Criteria hierarchy (Main → Sub → Criterion, enabled). Sourced from AVL Target Wizard UI; extend via Export .edo or edit this file.",
+  "name": "Operation modes criteria",
+  "modes": [
+    {
+      "main": "Acceleration",
+      "sub": "Constant load",
+      "criteria": [
+        {"name": "Acceleration disturbances", "enabled": true},
+        {"name": "Acceleration disturbances HF", "enabled": true},
+        {"name": "Acceleration disturbances LF", "enabled": true},
+        {"name": "Acceleration steps", "enabled": true},
+        {"name": "Expected acceleration", "enabled": true},
+        {"name": "Pedal map", "enabled": true},
+        {"name": "Reference acceleration", "enabled": true},
+        {"name": "Surge", "enabled": true}
+      ]
+    },
+    {
+      "main": "Acceleration",
+      "sub": "Full load",
+      "criteria": [
+        {"name": "90% Torque range", "enabled": true},
+        {"name": "90% Torque threshold", "enabled": true},
+        {"name": "Engine free acceleration", "enabled": true},
+        {"name": "Low end torque", "enabled": true},
+        {"name": "Maximum expected torque", "enabled": true},
+        {"name": "RPM limiter", "enabled": true},
+        {"name": "Torque smoothness", "enabled": true},
+        {"name": "Wide torque range", "enabled": true}
+      ]
+    },
+    {
+      "main": "Acceleration",
+      "sub": "Load decrease",
+      "criteria": [
+        {"name": "Correlation", "enabled": true},
+        {"name": "Torque build-up", "enabled": true},
+        {"name": "Torque response", "enabled": true}
+      ]
+    },
+    {
+      "main": "Acceleration",
+      "sub": "Load increase",
+      "criteria": [
+        {"name": "Acceleration disturbances", "enabled": true},
+        {"name": "Acceleration disturbances HF", "enabled": true},
+        {"name": "Acceleration disturbances LF", "enabled": true},
+        {"name": "Correlation", "enabled": true},
+        {"name": "Expected acceleration", "enabled": true},
+        {"name": "Reference acceleration", "enabled": true},
+        {"name": "Surge", "enabled": true},
+        {"name": "Torque build-up", "enabled": true},
+        {"name": "Torque response", "enabled": true}
+      ]
+    },
+    {
+      "main": "Constant speed",
+      "sub": "Constant load",
+      "criteria": [
+        {"name": "Acceleration disturbances", "enabled": true},
+        {"name": "Acceleration disturbances HF", "enabled": true},
+        {"name": "Acceleration disturbances LF", "enabled": true},
+        {"name": "Correlation", "enabled": true},
+        {"name": "Engine speed fluctuations", "enabled": true},
+        {"name": "Surge", "enabled": true}
+      ]
+    },
+    {
+      "main": "Constant speed",
+      "sub": "Without load",
+      "criteria": [
+        {"name": "Acceleration disturbances", "enabled": true},
+        {"name": "Acceleration disturbances HF", "enabled": true},
+        {"name": "Acceleration disturbances LF", "enabled": true},
+        {"name": "Correlation", "enabled": true},
+        {"name": "Engine speed fluctuations", "enabled": true},
+        {"name": "Surge", "enabled": true},
+        {"name": "Vehicle speed", "enabled": true}
+      ]
+    },
+    {
+      "main": "Cylinder deactivation",
+      "sub": "Cylinder deactivation",
+      "criteria": [
+        {"name": "Acceleration disturbances", "enabled": true},
+        {"name": "Acceleration disturbances HF", "enabled": true},
+        {"name": "Acceleration disturbances LF", "enabled": true},
+        {"name": "Engine speed change", "enabled": true},
+        {"name": "Steadiness", "enabled": true}
+      ]
+    },
+    {
+      "main": "Cylinder deactivation",
+      "sub": "Cylinder reactivation",
+      "criteria": [
+        {"name": "Acceleration disturbances", "enabled": true},
+        {"name": "Acceleration disturbances HF", "enabled": true},
+        {"name": "Acceleration disturbances LF", "enabled": true},
+        {"name": "Engine speed change", "enabled": true},
+        {"name": "Steadiness", "enabled": true}
+      ]
+    },
+    {
+      "main": "Deceleration",
+      "sub": "Brake decrease",
+      "criteria": [
+        {"name": "Jerks", "enabled": true},
+        {"name": "Kick", "enabled": true},
+        {"name": "Response", "enabled": true},
+        {"name": "Steadiness", "enabled": true}
+      ]
+    },
+    {
+      "main": "Deceleration",
+      "sub": "Brake increase",
+      "criteria": [
+        {"name": "Jerks", "enabled": true},
+        {"name": "Kick", "enabled": true},
+        {"name": "Response", "enabled": true},
+        {"name": "Steadiness", "enabled": true}
+      ]
+    },
+    {
+      "main": "Deceleration",
+      "sub": "Coast down",
+      "criteria": []
+    },
+    {
+      "main": "Deceleration",
+      "sub": "Constant Brake",
+      "criteria": [
+        {"name": "Acceleration disturbances", "enabled": true},
+        {"name": "Acceleration disturbances HF", "enabled": true},
+        {"name": "Acceleration disturbances LF", "enabled": true},
+        {"name": "Acceleration steps", "enabled": true},
+        {"name": "Surge", "enabled": true}
+      ]
+    },
+    {
+      "main": "Deceleration",
+      "sub": "Transition to constant speed",
+      "criteria": [
+        {"name": "Acceleration disturbances", "enabled": true},
+        {"name": "Acceleration disturbances HF", "enabled": true},
+        {"name": "Acceleration disturbances LF", "enabled": true},
+        {"name": "Engine speed undershoot", "enabled": true},
+        {"name": "Idle stabilization duration", "enabled": true},
+        {"name": "Transition shock", "enabled": true},
+        {"name": "Transition surge", "enabled": true}
+      ]
+    },
+    {
+      "main": "Deceleration",
+      "sub": "Without brake",
+      "criteria": [
+        {"name": "Acceleration disturbances", "enabled": true},
+        {"name": "Acceleration disturbances HF", "enabled": true},
+        {"name": "Acceleration disturbances LF", "enabled": true},
+        {"name": "Acceleration steps", "enabled": true},
+        {"name": "Expected deceleration stronger", "enabled": true},
+        {"name": "Expected deceleration weaker", "enabled": true},
+        {"name": "Reference deceleration stronger", "enabled": true},
+        {"name": "Reference deceleration weaker", "enabled": true},
+        {"name": "Surge", "enabled": true}
+      ]
+    },
+    {
+      "main": "Drive away",
+      "sub": "Creep",
+      "criteria": [
+        {"name": "Acceleration disturbances", "enabled": true},
+        {"name": "Acceleration disturbances HF", "enabled": true},
+        {"name": "Acceleration disturbances LF", "enabled": true},
+        {"name": "Acceleration increase", "enabled": true},
+        {"name": "Brake release bump", "enabled": true},
+        {"name": "Brake release delay", "enabled": true},
+        {"name": "Brake release surge", "enabled": true},
+        {"name": "Clutch grabbing", "enabled": true},
+        {"name": "Clutch surge", "enabled": true},
+        {"name": "Engagement point", "enabled": true},
+        {"name": "Engagement shock", "enabled": true},
+        {"name": "Engine speed drop", "enabled": true},
+        {"name": "Engine stall", "enabled": true},
+        {"name": "Jerks", "enabled": true},
+        {"name": "Longitudinal acceleration", "enabled": true},
+        {"name": "Stall sensitivity", "enabled": true}
+      ]
+    },
+    {
+      "main": "Drive away",
+      "sub": "Hill start",
+      "criteria": [
+        {"name": "Acceleration disturbances", "enabled": true},
+        {"name": "Acceleration disturbances HF", "enabled": true},
+        {"name": "Acceleration disturbances LF", "enabled": true},
+        {"name": "Acceleration increase", "enabled": true},
+        {"name": "Acceleration peak", "enabled": true},
+        {"name": "Acceleration performance", "enabled": true},
+        {"name": "Bump", "enabled": true},
+        {"name": "Clutch grabbing", "enabled": true},
+        {"name": "Clutch surge", "enabled": true},
+        {"name": "Engagement point", "enabled": true},
+        {"name": "Engagement shock", "enabled": true},
+        {"name": "Engagement steadiness", "enabled": true},
+        {"name": "Engine speed drop", "enabled": true},
+        {"name": "Engine speed overshoot", "enabled": true},
+        {"name": "Engine stall", "enabled": true},
+        {"name": "Jerks", "enabled": true},
+        {"name": "Longitudinal acceleration", "enabled": true},
+        {"name": "Required pedal position", "enabled": true},
+        {"name": "Shock", "enabled": true},
+        {"name": "Stall sensitivity", "enabled": true},
+        {"name": "Stumble", "enabled": true}
+      ]
+    },
+    {
+      "main": "Drive away",
+      "sub": "Rolling start",
+      "criteria": [
+        {"name": "Acceleration disturbances", "enabled": true},
+        {"name": "Acceleration disturbances HF", "enabled": true},
+        {"name": "Acceleration disturbances LF", "enabled": true},
+        {"name": "Engagement steadiness", "enabled": true},
+        {"name": "Response delay", "enabled": true}
+      ]
+    },
+    {
+      "main": "Drive away",
+      "sub": "Standing start",
+      "criteria": [
+        {"name": "Acceleration disturbances", "enabled": true},
+        {"name": "Acceleration disturbances HF", "enabled": true},
+        {"name": "Acceleration disturbances LF", "enabled": true},
+        {"name": "Acceleration increase", "enabled": true},
+        {"name": "Acceleration peak", "enabled": true},
+        {"name": "Acceleration performance", "enabled": true},
+        {"name": "Agility", "enabled": true},
+        {"name": "Brake release bump", "enabled": true},
+        {"name": "Brake release delay", "enabled": true},
+        {"name": "Brake release surge", "enabled": true},
+        {"name": "Bump", "enabled": true},
+        {"name": "Clutch grabbing", "enabled": true},
+        {"name": "Clutch surge", "enabled": true},
+        {"name": "Engagement point", "enabled": true},
+        {"name": "Engagement shock", "enabled": true},
+        {"name": "Engagement steadiness", "enabled": true},
+        {"name": "Engine speed drop", "enabled": true},
+        {"name": "Engine speed overshoot", "enabled": true},
+        {"name": "Engine stall", "enabled": true},
+        {"name": "Jerks", "enabled": true},
+        {"name": "Longitudinal acceleration", "enabled": true},
+        {"name": "Required pedal position", "enabled": true},
+        {"name": "Response delay", "enabled": true},
+        {"name": "Shock", "enabled": true},
+        {"name": "Stall sensitivity", "enabled": true},
+        {"name": "Stumble", "enabled": true}
+      ]
+    },
+    {
+      "main": "Engine shut off",
+      "sub": "Auto stop",
+      "criteria": [
+        {"name": "Acceleration disturbances", "enabled": true},
+        {"name": "Acceleration disturbances HF", "enabled": true},
+        {"name": "Acceleration disturbances LF", "enabled": true},
+        {"name": "Duration", "enabled": true},
+        {"name": "Surge", "enabled": true}
+      ]
+    },
+    {
+      "main": "Engine shut off",
+      "sub": "Manual stop",
+      "criteria": [
+        {"name": "Acceleration disturbances", "enabled": true},
+        {"name": "Acceleration disturbances HF", "enabled": true},
+        {"name": "Acceleration disturbances LF", "enabled": true},
+        {"name": "Duration", "enabled": true},
+        {"name": "Surge", "enabled": true}
+      ]
+    },
+    {
+      "main": "Engine start",
+      "sub": "Auto start vehicle moving",
+      "criteria": [
+        {"name": "Acceleration disturbances", "enabled": true},
+        {"name": "Acceleration disturbances HF", "enabled": true},
+        {"name": "Acceleration disturbances LF", "enabled": true},
+        {"name": "Engine speed overshoot", "enabled": true},
+        {"name": "Engine speed stumble", "enabled": true},
+        {"name": "Engine speed undershoot", "enabled": true},
+        {"name": "Idle stabilization duration", "enabled": true},
+        {"name": "Speed pickup duration", "enabled": true},
+        {"name": "Start duration", "enabled": true},
+        {"name": "Starter speed", "enabled": true},
+        {"name": "Surge", "enabled": true},
+        {"name": "Traction reduction", "enabled": true}
+      ]
+    },
+    {
+      "main": "Engine start",
+      "sub": "Auto start vehicle stationary",
+      "criteria": [
+        {"name": "Acceleration disturbances", "enabled": true},
+        {"name": "Acceleration disturbances HF", "enabled": true},
+        {"name": "Acceleration disturbances LF", "enabled": true},
+        {"name": "Engine speed overshoot", "enabled": true},
+        {"name": "Engine speed stumble", "enabled": true},
+        {"name": "Engine speed undershoot", "enabled": true},
+        {"name": "Idle stabilization duration", "enabled": true},
+        {"name": "Speed pickup duration", "enabled": true},
+        {"name": "Start duration", "enabled": true},
+        {"name": "Starter speed", "enabled": true},
+        {"name": "Surge", "enabled": true},
+        {"name": "Traction reduction", "enabled": true}
+      ]
+    },
+    {
+      "main": "Engine start",
+      "sub": "Manual start",
+      "criteria": [
+        {"name": "Acceleration disturbances", "enabled": true},
+        {"name": "Acceleration disturbances HF", "enabled": true},
+        {"name": "Acceleration disturbances LF", "enabled": true},
+        {"name": "Engine speed overshoot", "enabled": true},
+        {"name": "Engine speed stumble", "enabled": true},
+        {"name": "Engine speed undershoot", "enabled": true},
+        {"name": "Idle stabilization duration", "enabled": true},
+        {"name": "Speed pickup duration", "enabled": true},
+        {"name": "Start duration", "enabled": true},
+        {"name": "Starter response delay", "enabled": true},
+        {"name": "Starter speed", "enabled": true},
+        {"name": "Traction reduction", "enabled": true}
+      ]
+    },
+    {
+      "main": "Gear shift",
+      "sub": "Coast / brake-on downshift",
+      "criteria": [
+        {"name": "Acceleration disturbances LF", "enabled": true},
+        {"name": "Ax gradients before ratio change", "enabled": true},
+        {"name": "Ax gradients during ratio change", "enabled": true},
+        {"name": "Jerks", "enabled": true},
+        {"name": "Kick", "enabled": true},
+        {"name": "Shift delay", "enabled": true},
+        {"name": "Shift duration", "enabled": true},
+        {"name": "Shock", "enabled": true},
+        {"name": "Speed increase", "enabled": true},
+        {"name": "Steadiness", "enabled": true},
+        {"name": "Traction reduction", "enabled": true}
+      ]
+    },
+    {
+      "main": "Gear shift",
+      "sub": "Coast / brake-on upshift",
+      "criteria": [
+        {"name": "Acceleration disturbances", "enabled": true},
+        {"name": "Acceleration disturbances HF", "enabled": true},
+        {"name": "Acceleration disturbances LF", "enabled": true},
+        {"name": "Ax gradients after ratio change", "enabled": true},
+        {"name": "Ax gradients during ratio change", "enabled": true},
+        {"name": "Deceleration characteristic", "enabled": true},
+        {"name": "Jerks", "enabled": true},
+        {"name": "Kick", "enabled": true},
+        {"name": "Shift delay", "enabled": true},
+        {"name": "Shift duration", "enabled": true},
+        {"name": "Shock", "enabled": true},
+        {"name": "Speed decrease", "enabled": true},
+        {"name": "Steadiness", "enabled": true},
+        {"name": "Traction reduction", "enabled": true}
+      ]
+    },
+    {
+      "main": "Gear shift",
+      "sub": "Downshift",
+      "criteria": [
+        {"name": "Acceleration disturbances", "enabled": true},
+        {"name": "Acceleration disturbances HF", "enabled": true},
+        {"name": "Acceleration disturbances LF", "enabled": true},
+        {"name": "Engine speed overshoot", "enabled": true},
+        {"name": "Jerks", "enabled": true},
+        {"name": "Kick", "enabled": true},
+        {"name": "Speed decrease", "enabled": true},
+        {"name": "Speed decrease delay", "enabled": true}
+      ]
+    },
+    {
+      "main": "Gear shift",
+      "sub": "Kick down / tip in downshift",
+      "criteria": [
+        {"name": "Acceleration disturbances", "enabled": true},
+        {"name": "Acceleration disturbances HF", "enabled": true},
+        {"name": "Acceleration disturbances LF", "enabled": true},
+        {"name": "Ax gradients after ratio change", "enabled": true},
+        {"name": "Ax gradients during ratio change", "enabled": true},
+        {"name": "Ax increase", "enabled": true},
+        {"name": "Engine speed at engagement", "enabled": true},
+        {"name": "Jerks", "enabled": true},
+        {"name": "Kick", "enabled": true},
+        {"name": "Response delay", "enabled": true},
+        {"name": "Shift characteristic", "enabled": true},
+        {"name": "Shift delay", "enabled": true},
+        {"name": "Shift duration", "enabled": true},
+        {"name": "Shock", "enabled": true},
+        {"name": "Speed increase", "enabled": true},
+        {"name": "Steadiness", "enabled": true},
+        {"name": "Traction reduction", "enabled": true}
+      ]
+    },
+    {
+      "main": "Gear shift",
+      "sub": "Load reversal downshift",
+      "criteria": [
+        {"name": "Acceleration disturbances", "enabled": true},
+        {"name": "Acceleration disturbances HF", "enabled": true},
+        {"name": "Acceleration disturbances LF", "enabled": true},
+        {"name": "Shift delay", "enabled": true},
+        {"name": "Shift duration", "enabled": true},
+        {"name": "Speed increase", "enabled": true},
+        {"name": "Steadiness", "enabled": true}
+      ]
+    },
+    {
+      "main": "Gear shift",
+      "sub": "Load reversal upshift",
+      "criteria": [
+        {"name": "Acceleration disturbances", "enabled": true},
+        {"name": "Acceleration disturbances HF", "enabled": true},
+        {"name": "Acceleration disturbances LF", "enabled": true},
+        {"name": "Shift delay", "enabled": true},
+        {"name": "Shift duration", "enabled": true},
+        {"name": "Speed decrease", "enabled": true},
+        {"name": "Steadiness", "enabled": true}
+      ]
+    },
+    {
+      "main": "Gear shift",
+      "sub": "Maneuvering",
+      "criteria": [
+        {"name": "Acceleration disturbances", "enabled": true},
+        {"name": "Acceleration disturbances HF", "enabled": true},
+        {"name": "Acceleration disturbances LF", "enabled": true},
+        {"name": "Bump", "enabled": true},
+        {"name": "Delay", "enabled": true},
+        {"name": "Jerks", "enabled": true}
+      ]
+    },
+    {
+      "main": "Gear shift",
+      "sub": "No shift",
+      "criteria": [
+        {"name": "Engine speed overshoot", "enabled": true},
+        {"name": "Jerks", "enabled": true},
+        {"name": "Kick", "enabled": true},
+        {"name": "Speed decrease", "enabled": true},
+        {"name": "Speed decrease delay", "enabled": true}
+      ]
+    },
+    {
+      "main": "Gear shift",
+      "sub": "Power-on downshift",
+      "criteria": [
+        {"name": "Acceleration disturbances", "enabled": true},
+        {"name": "Acceleration disturbances HF", "enabled": true},
+        {"name": "Acceleration disturbances LF", "enabled": true},
+        {"name": "Ax gradients after ratio change", "enabled": true},
+        {"name": "Ax gradients during ratio change", "enabled": true},
+        {"name": "Jerks", "enabled": true},
+        {"name": "Kick", "enabled": true},
+        {"name": "Shift characteristic", "enabled": true},
+        {"name": "Shift delay", "enabled": true},
+        {"name": "Shift duration", "enabled": true},
+        {"name": "Shock", "enabled": true},
+        {"name": "Speed increase", "enabled": true},
+        {"name": "Steadiness", "enabled": true},
+        {"name": "Traction reduction", "enabled": true}
+      ]
+    },
+    {
+      "main": "Gear shift",
+      "sub": "Power-on upshift",
+      "criteria": [
+        {"name": "Acceleration disturbances", "enabled": true},
+        {"name": "Acceleration disturbances HF", "enabled": true},
+        {"name": "Acceleration disturbances LF", "enabled": true},
+        {"name": "Ax gradients before ratio change", "enabled": true},
+        {"name": "Ax gradients during ratio change", "enabled": true},
+        {"name": "Jerks", "enabled": true},
+        {"name": "Kick", "enabled": true},
+        {"name": "Shift delay", "enabled": true},
+        {"name": "Shift duration", "enabled": true},
+        {"name": "Shock", "enabled": true},
+        {"name": "Speed decrease", "enabled": true},
+        {"name": "Steadiness", "enabled": true},
+        {"name": "Traction reduction", "enabled": true}
+      ]
+    },
+    {
+      "main": "Gear shift",
+      "sub": "Selector lever change",
+      "criteria": [
+        {"name": "Acceleration disturbances", "enabled": true},
+        {"name": "Acceleration disturbances HF", "enabled": true},
+        {"name": "Acceleration disturbances LF", "enabled": true},
+        {"name": "Bump", "enabled": true},
+        {"name": "Engine speed drift", "enabled": true},
+        {"name": "Engine speed fluctuations", "enabled": true},
+        {"name": "Engine speed overshoot", "enabled": true},
+        {"name": "Engine speed undershoot", "enabled": true},
+        {"name": "Idle stabilization duration", "enabled": true}
+      ]
+    },
+    {
+      "main": "Gear shift",
+      "sub": "Shift abort",
+      "criteria": [
+        {"name": "Acceleration disturbances", "enabled": true},
+        {"name": "Acceleration disturbances HF", "enabled": true},
+        {"name": "Acceleration disturbances LF", "enabled": true},
+        {"name": "Shift duration", "enabled": true},
+        {"name": "Steadiness", "enabled": true}
+      ]
+    },
+    {
+      "main": "Gear shift",
+      "sub": "Tip in upshift",
+      "criteria": [
+        {"name": "Acceleration disturbances", "enabled": true},
+        {"name": "Acceleration disturbances HF", "enabled": true},
+        {"name": "Acceleration disturbances LF", "enabled": true},
+        {"name": "Ax gradients after ratio change", "enabled": true},
+        {"name": "Ax gradients during ratio change", "enabled": true},
+        {"name": "Ax increase", "enabled": true},
+        {"name": "Jerks", "enabled": true},
+        {"name": "Kick", "enabled": true},
+        {"name": "Response delay", "enabled": true},
+        {"name": "Shift delay", "enabled": true},
+        {"name": "Shift duration", "enabled": true},
+        {"name": "Shock", "enabled": true},
+        {"name": "Speed decrease", "enabled": true},
+        {"name": "Steadiness", "enabled": true},
+        {"name": "Traction reduction", "enabled": true}
+      ]
+    },
+    {
+      "main": "Gear shift",
+      "sub": "Tip-in at constant speed",
+      "criteria": [
+        {"name": "Response delay", "enabled": true},
+        {"name": "Ax increase", "enabled": true},
+        {"name": "Acceleration disturbances", "enabled": true},
+        {"name": "Surge", "enabled": true}
+      ]
+    },
+    {
+      "main": "Gear shift",
+      "sub": "Tip-out upshift",
+      "criteria": [
+        {"name": "Acceleration disturbances", "enabled": true},
+        {"name": "Acceleration disturbances HF", "enabled": true},
+        {"name": "Acceleration disturbances LF", "enabled": true},
+        {"name": "Deceleration characteristic", "enabled": true},
+        {"name": "Jerks", "enabled": true},
+        {"name": "Kick", "enabled": true},
+        {"name": "Shift delay", "enabled": true},
+        {"name": "Shift duration", "enabled": true},
+        {"name": "Shock", "enabled": true},
+        {"name": "Speed decrease", "enabled": true},
+        {"name": "Steadiness", "enabled": true},
+        {"name": "Traction reduction", "enabled": true}
+      ]
+    },
+    {
+      "main": "Gear shift",
+      "sub": "Tip out downshift",
+      "criteria": [
+        {"name": "Acceleration disturbances", "enabled": true},
+        {"name": "Acceleration disturbances HF", "enabled": true},
+        {"name": "Acceleration disturbances LF", "enabled": true},
+        {"name": "Jerks", "enabled": true},
+        {"name": "Kick", "enabled": true},
+        {"name": "Shift delay", "enabled": true},
+        {"name": "Shift duration", "enabled": true},
+        {"name": "Shock", "enabled": true},
+        {"name": "Speed increase", "enabled": true},
+        {"name": "Steadiness", "enabled": true},
+        {"name": "Traction reduction", "enabled": true}
+      ]
+    },
+    {
+      "main": "Gear shift",
+      "sub": "Upshift",
+      "criteria": [
+        {"name": "Acceleration disturbances", "enabled": true},
+        {"name": "Acceleration disturbances HF", "enabled": true},
+        {"name": "Acceleration disturbances LF", "enabled": true},
+        {"name": "Engagement shock", "enabled": true},
+        {"name": "Engine speed overshoot", "enabled": true},
+        {"name": "Gears spreading", "enabled": true},
+        {"name": "Jerks", "enabled": true},
+        {"name": "Kick", "enabled": true},
+        {"name": "Speed decrease", "enabled": true},
+        {"name": "Speed decrease delay", "enabled": true}
+      ]
+    },
+    {
+      "main": "Idle",
+      "sub": "Air conditioning on / off",
+      "criteria": [
+        {"name": "Acceleration disturbances", "enabled": true},
+        {"name": "Acceleration disturbances HF", "enabled": true},
+        {"name": "Acceleration disturbances LF", "enabled": true},
+        {"name": "Engine speed drift", "enabled": true},
+        {"name": "Engine speed fluctuations", "enabled": true},
+        {"name": "Engine speed overshoot", "enabled": true},
+        {"name": "Engine speed undershoot", "enabled": true},
+        {"name": "Idle stabilization duration", "enabled": true}
+      ]
+    },
+    {
+      "main": "Idle",
+      "sub": "Electric load on / off",
+      "criteria": [
+        {"name": "Acceleration disturbances", "enabled": true},
+        {"name": "Acceleration disturbances HF", "enabled": true},
+        {"name": "Acceleration disturbances LF", "enabled": true},
+        {"name": "Engine speed drift", "enabled": true},
+        {"name": "Engine speed fluctuations", "enabled": true},
+        {"name": "Engine speed overshoot", "enabled": true},
+        {"name": "Engine speed undershoot", "enabled": true},
+        {"name": "Idle stabilization duration", "enabled": true}
+      ]
+    },
+    {
+      "main": "Idle",
+      "sub": "Rev-up",
+      "criteria": [
+        {"name": "Engine speed overshoot", "enabled": true},
+        {"name": "Speed decrease", "enabled": true},
+        {"name": "Speed decrease delay", "enabled": true},
+        {"name": "Speed increase", "enabled": true},
+        {"name": "Speed increase delay", "enabled": true},
+        {"name": "Stumble", "enabled": true}
+      ]
+    },
+    {
+      "main": "Idle",
+      "sub": "Transition to idle",
+      "criteria": [
+        {"name": "Engine speed fluctuations", "enabled": true},
+        {"name": "Engine speed undershoot", "enabled": true},
+        {"name": "Idle stabilization duration", "enabled": true}
+      ]
+    },
+    {
+      "main": "Idle",
+      "sub": "Vehicle rolling",
+      "criteria": [
+        {"name": "Combustion quality", "enabled": true},
+        {"name": "Cylinder balance", "enabled": true},
+        {"name": "Engine speed drift", "enabled": true},
+        {"name": "Engine speed fluctuations", "enabled": true},
+        {"name": "Idle speed", "enabled": true}
+      ]
+    },
+    {
+      "main": "Idle",
+      "sub": "Vehicle stationary",
+      "criteria": [
+        {"name": "Acceleration disturbances", "enabled": true},
+        {"name": "Acceleration disturbances HF", "enabled": true},
+        {"name": "Acceleration disturbances LF", "enabled": true},
+        {"name": "Combustion quality", "enabled": true},
+        {"name": "Cylinder balance", "enabled": true},
+        {"name": "Engine speed drift", "enabled": true},
+        {"name": "Engine speed fluctuations", "enabled": true},
+        {"name": "Idle speed", "enabled": true},
+        {"name": "Surge", "enabled": true}
+      ]
+    },
+    {
+      "main": "Performance",
+      "sub": "0-100 kph",
+      "criteria": [
+        {"name": "Duration 0-100 kph", "enabled": true}
+      ]
+    },
+    {
+      "main": "Performance",
+      "sub": "0->>100 kph",
+      "criteria": [
+        {"name": "Duration 0->>100 kph", "enabled": true}
+      ]
+    },
+    {
+      "main": "Performance",
+      "sub": "In-gear acceleration",
+      "criteria": [
+        {"name": "Duration in-gear", "enabled": true}
+      ]
+    },
+    {
+      "main": "Performance",
+      "sub": "Through gears acceleration",
+      "criteria": [
+        {"name": "Duration through gears", "enabled": true}
+      ]
+    },
+    {
+      "main": "Sailing",
+      "sub": "Enter sailing",
+      "criteria": [
+        {"name": "Acceleration disturbances", "enabled": true},
+        {"name": "Acceleration disturbances HF", "enabled": true},
+        {"name": "Acceleration disturbances LF", "enabled": true},
+        {"name": "Surge", "enabled": true}
+      ]
+    },
+    {
+      "main": "Sailing",
+      "sub": "Exit sailing",
+      "criteria": [
+        {"name": "Acceleration disturbances", "enabled": true},
+        {"name": "Acceleration disturbances HF", "enabled": true},
+        {"name": "Acceleration disturbances LF", "enabled": true},
+        {"name": "Engine speed overshoot", "enabled": true},
+        {"name": "Jerks", "enabled": true},
+        {"name": "Kick", "enabled": true},
+        {"name": "Shock", "enabled": true},
+        {"name": "Speed increase delay", "enabled": true},
+        {"name": "Speed pickup duration", "enabled": true},
+        {"name": "Surge", "enabled": true}
+      ]
+    },
+    {
+      "main": "Sailing",
+      "sub": "Gear tracking",
+      "criteria": [
+        {"name": "Acceleration disturbances", "enabled": true},
+        {"name": "Acceleration disturbances HF", "enabled": true},
+        {"name": "Acceleration disturbances LF", "enabled": true},
+        {"name": "Surge", "enabled": true}
+      ]
+    },
+    {
+      "main": "TCC control",
+      "sub": "Converter controlled slip",
+      "criteria": [
+        {"name": "Acceleration disturbances", "enabled": true},
+        {"name": "Acceleration disturbances HF", "enabled": true},
+        {"name": "Acceleration disturbances LF", "enabled": true},
+        {"name": "Correlation", "enabled": true},
+        {"name": "Steadiness", "enabled": true}
+      ]
+    },
+    {
+      "main": "TCC control",
+      "sub": "Converter lock up",
+      "criteria": [
+        {"name": "Acceleration disturbances", "enabled": true},
+        {"name": "Acceleration disturbances HF", "enabled": true},
+        {"name": "Acceleration disturbances LF", "enabled": true},
+        {"name": "Correlation", "enabled": true},
+        {"name": "Engine speed step", "enabled": true},
+        {"name": "Steadiness", "enabled": true}
+      ]
+    },
+    {
+      "main": "TCC control",
+      "sub": "Converter release",
+      "criteria": [
+        {"name": "Acceleration disturbances", "enabled": true},
+        {"name": "Acceleration disturbances HF", "enabled": true},
+        {"name": "Acceleration disturbances LF", "enabled": true},
+        {"name": "Correlation", "enabled": true},
+        {"name": "Steadiness", "enabled": true}
+      ]
+    },
+    {
+      "main": "Tip in",
+      "sub": "At constant speed / acceleration",
+      "criteria": [
+        {"name": "Absolute torque", "enabled": true},
+        {"name": "Acceleration disturbances", "enabled": true},
+        {"name": "Acceleration disturbances HF", "enabled": true},
+        {"name": "Acceleration disturbances LF", "enabled": true},
+        {"name": "Agility", "enabled": true},
+        {"name": "Ax increase", "enabled": true},
+        {"name": "Bump", "enabled": true},
+        {"name": "Flare", "enabled": true},
+        {"name": "Jerks", "enabled": true},
+        {"name": "Kick", "enabled": true},
+        {"name": "Response delay", "enabled": true},
+        {"name": "Rubber-band effect negative", "enabled": true},
+        {"name": "Rubber-band effect positive", "enabled": true},
+        {"name": "Steadiness", "enabled": true},
+        {"name": "Stumble", "enabled": true},
+        {"name": "Torque smoothness", "enabled": true}
+      ]
+    },
+    {
+      "main": "Tip in",
+      "sub": "At deceleration",
+      "criteria": [
+        {"name": "Absolute torque", "enabled": true},
+        {"name": "Acceleration disturbances", "enabled": true},
+        {"name": "Acceleration disturbances HF", "enabled": true},
+        {"name": "Acceleration disturbances LF", "enabled": true},
+        {"name": "Agility", "enabled": true},
+        {"name": "Ax increase", "enabled": true},
+        {"name": "Bump", "enabled": true},
+        {"name": "Flare", "enabled": true},
+        {"name": "Jerks", "enabled": true},
+        {"name": "Kick", "enabled": true},
+        {"name": "Response delay", "enabled": true},
+        {"name": "Rubber-band effect negative", "enabled": true},
+        {"name": "Rubber-band effect positive", "enabled": true},
+        {"name": "Steadiness", "enabled": true},
+        {"name": "Stumble", "enabled": true},
+        {"name": "Torque smoothness", "enabled": true}
+      ]
+    },
+    {
+      "main": "Tip out",
+      "sub": "At constant speed / acceleration",
+      "criteria": [
+        {"name": "Acceleration disturbances", "enabled": true},
+        {"name": "Acceleration disturbances HF", "enabled": true},
+        {"name": "Acceleration disturbances LF", "enabled": true},
+        {"name": "Acceleration overshoot", "enabled": true},
+        {"name": "Bump", "enabled": true},
+        {"name": "Jerks", "enabled": true},
+        {"name": "Kick", "enabled": true},
+        {"name": "Response delay", "enabled": true},
+        {"name": "Steadiness", "enabled": true}
+      ]
+    },
+    {
+      "main": "Tip out",
+      "sub": "At deceleration",
+      "criteria": [
+        {"name": "Acceleration disturbances", "enabled": true},
+        {"name": "Acceleration disturbances HF", "enabled": true},
+        {"name": "Acceleration disturbances LF", "enabled": true},
+        {"name": "Acceleration overshoot", "enabled": true},
+        {"name": "Bump", "enabled": true},
+        {"name": "Jerks", "enabled": true},
+        {"name": "Kick", "enabled": true},
+        {"name": "Response delay", "enabled": true},
+        {"name": "Steadiness", "enabled": true}
+      ]
+    },
+    {
+      "main": "Vehicle stationary",
+      "sub": "Vehicle at standstill",
+      "criteria": [
+        {"name": "Acceleration disturbances", "enabled": true},
+        {"name": "Acceleration disturbances HF", "enabled": true},
+        {"name": "Acceleration disturbances LF", "enabled": true}
+      ]
+    },
+    {
+      "main": "Vehicle stationary",
+      "sub": "Vehicle stop",
+      "criteria": [
+        {"name": "Acceleration decrease", "enabled": true},
+        {"name": "Acceleration disturbances", "enabled": true},
+        {"name": "Acceleration disturbances HF", "enabled": true},
+        {"name": "Acceleration disturbances LF", "enabled": true},
+        {"name": "Acceleration increase", "enabled": true},
+        {"name": "Engine speed fluctuations", "enabled": true},
+        {"name": "Engine speed overshoot", "enabled": true},
+        {"name": "Engine speed undershoot", "enabled": true}
+      ]
+    }
+  ]
+}

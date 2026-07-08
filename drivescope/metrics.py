@@ -12,6 +12,85 @@ def _onset(grid, ax, t_from, thr=0.5):
     return float(grid[on[0]]) if len(on) else None
 
 
+def _disturb_pp(grid, ax, t0, t1):
+    """Peak-to-peak residual acceleration after detrending."""
+    seg = (grid >= t0) & (grid <= t1)
+    if seg.sum() < 6:
+        return None, None
+    gw = grid[seg]; axw = ax[seg]
+    trend = np.polyval(np.polyfit(gw, axw, 1), gw)
+    resid = axw - trend
+    pp = float(np.ptp(resid))
+    cov = float(np.std(resid) / (abs(np.mean(axw)) + 1e-6))
+    lin = float(max(0, 100 * (1 - cov)))
+    return round(pp, 2), round(lin, 1)
+
+
+def _launch_metrics(g, ax, ped, rpm, veh, ti, dt, t_ped, tax):
+    """Extended drive-away / standing-start metrics for AVL criteria scorecard."""
+    m = {}
+    w = (g >= ti) & (g <= ti + 2.5)
+    w_build = (g >= ti) & (g <= ti + 1.8)
+    w_eng = (g >= ti) & (g <= ti + 0.5)
+    dax = _grad(ax, dt)
+
+    if tax is not None and t_ped is not None:
+        delay = max(0.0, (tax - t_ped) * 1000)
+        m["launch_ms"] = round(delay, 0)
+        m["tot_ms"] = round(delay, 0)
+        m["resp_ms"] = round(delay, 0)
+    else:
+        m["launch_ms"] = None
+        m["tot_ms"] = None
+        m["resp_ms"] = None
+
+    m["ax_peak"] = round(float(np.nanmax(ax[w])), 2)
+    m["ax_mean"] = round(float(np.nanmean(ax[w_build])), 2)
+    m["jerk_peak"] = round(float(np.nanmax(np.abs(dax[w]))), 1)
+    m["engage_jerk"] = m["jerk_peak"]
+    m["posg"] = round(float(np.nanmax(dax[w_build])), 1)
+    m["negg"] = round(float(np.nanmin(dax[w_build])), 1)
+    m["neg_jerk"] = round(float(np.nanmin(dax[w])), 1)
+
+    if w_eng.sum() > 3:
+        m["ax_pp"] = round(float(np.ptp(ax[w_eng])), 2)
+        m["shock"] = round(float(np.nanmax(ax[w_eng]) - np.nanmin(ax[w_eng])), 2)
+
+    if tax is not None:
+        t_pull = float(tax)
+        pp, lin = _disturb_pp(g, ax, t_pull, min(t_pull + 1.5, float(g[-1])))
+        if pp is not None:
+            m["disturb_pp"] = pp
+            m["linearity_pct"] = lin
+
+    fs = _shuffle(g, ax, ti, ti + 1.5)
+    if fs is not None:
+        m["fs"] = round(fs, 2)
+
+    if ped is not None:
+        on = np.where((g >= ti - 0.6) & (ped > 5))[0]
+        if len(on):
+            m["pedal_at_launch"] = round(float(ped[on[0]]), 0)
+        m["pedal_mean"] = round(float(np.nanmean(ped[(g >= ti) & (g <= ti + 1.0)])), 0)
+
+    if rpm is not None:
+        wr = (g >= ti - 0.3) & (g <= ti + 2.5)
+        m["rpm_start"] = round(float(rpm[np.argmin(np.abs(g - ti))]))
+        m["rpm_peak"] = round(float(np.nanmax(rpm[wr])))
+        m["rpm_min"] = round(float(np.nanmin(rpm[wr])), 0)
+        pre = (g >= ti - 1.0) & (g < ti)
+        post = (g >= ti) & (g <= ti + 1.2)
+        if pre.sum() > 2 and post.sum() > 2:
+            m["rpm_drop"] = round(float(np.nanmedian(rpm[pre])) - float(np.nanmin(rpm[post])), 0)
+
+    if veh is not None:
+        hit = np.where((g >= ti) & (veh >= 10))[0]
+        if len(hit):
+            m["t_to_10kph_ms"] = round((g[hit[0]] - ti) * 1000)
+
+    return m
+
+
 def _shuffle(grid, ax, t0, t1):
     seg = (grid >= t0) & (grid <= t1)
     if seg.sum() < 8:
@@ -69,24 +148,15 @@ def compute(rec, ev, dt=0.01):
             m["rpm_peak"] = round(float(np.nanmax(rpm[w])))
 
     elif t in ("drive_away", "drive_away_ess"):
-        # launch hesitation: pedal-on -> accel onset
         if ped is not None:
             on = np.where((g >= ti - 0.6) & (ped > 15))[0]
             t_ped = float(g[on[0]]) if len(on) else ti
         else:
             t_ped = ti
+        tax = _onset(g, ax, t_ped - 0.05, 0.4) if ax is not None else None
         if ax is not None:
-            tax = _onset(g, ax, t_ped - 0.05, 0.4)
-            m["launch_ms"] = round((tax - t_ped) * 1000) if tax else None
-            w = (g >= ti) & (g <= ti + 2.5)
-            m["ax_peak"] = round(float(np.nanmax(ax[w])), 2)
-            m["jerk_peak"] = round(float(np.nanmax(np.abs(_grad(ax, dt)[w]))), 1)
-            fs = _shuffle(g, ax, ti, ti + 1.5); m["fs"] = round(fs, 2) if fs else None
-        if veh is not None:
-            hit = np.where((g >= ti) & (veh >= 10))[0]
-            m["t_to_10kph_ms"] = round((g[hit[0]] - ti) * 1000) if len(hit) else None
+            m.update(_launch_metrics(g, ax, ped, rpm, veh, ti, dt, t_ped, tax))
         if t == "drive_away_ess" and rpm is not None:
-            # engine restart time: last engine-off sample before launch -> rpm>500
             pre = (g >= ti - 3.0) & (g <= ti)
             offs = np.where(pre & (rpm < 100))[0]
             ons = np.where((g > (g[offs[-1]] if len(offs) else ti - 3)) & (rpm > 500))[0]

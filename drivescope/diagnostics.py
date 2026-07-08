@@ -1,5 +1,10 @@
 """Per-maneuver issue detection, KPI cards, and calibration suggestions.
-Transparent thresholds -> edit freely to match program targets."""
+
+Uses Operation Modes Criteria (.edo / sdv_criteria.json) for ODRIV-aligned
+0–10 ratings where measurable; retains physical KPI cards for the dashboard.
+"""
+from . import criteria as crit_mod
+from . import avl_map
 
 TH = {
     "resp_warn": 350, "resp_bad": 500, "exec_warn": 400, "exec_bad": 600,
@@ -98,12 +103,12 @@ def diagnose(ev, m):
             act(2, "Linearise pedal-to-accel map", "Smooth the driver-demand / torque-to-wheel mapping so constant pedal yields constant build-up.")
 
     elif t == "lever_change":
-        kpi("Engagement jerk", f"{m.get('engage_jerk','â')}", "m/sÂ²/s", _sev(m.get("engage_jerk"), TH["jerk_warn"], TH["jerk_bad"]))
-        kpi("Shock (ax p-p)", f"{m.get('ax_pp','â')}", "m/sÂ²", _sev(m.get("ax_pp"), TH["shock_warn"], TH["shock_bad"]))
-        kpi("Shuffle", f"{m.get('fs','â')}<small> Hz</small>", "engagement ringdown", "warn" if m.get("fs") else "na")
-        kpi("â", "â", "", "na")
+        kpi("Engagement jerk", f"{m.get('engage_jerk','—')}", "m/s²/s", _sev(m.get("engage_jerk"), TH["jerk_warn"], TH["jerk_bad"]))
+        kpi("Shock (ax p-p)", f"{m.get('ax_pp','—')}", "m/s²", _sev(m.get("ax_pp"), TH["shock_warn"], TH["shock_bad"]))
+        kpi("Shuffle", f"{m.get('fs','—')}<small> Hz</small>", "engagement ringdown", "warn" if m.get("fs") else "na")
+        kpi("—", "—", "", "na")
         if m.get("engage_jerk") is not None and abs(m["engage_jerk"]) >= TH["jerk_warn"]:
-            issue("Garage-shift clunk", _sev(m["engage_jerk"], TH["jerk_warn"], TH["jerk_bad"]), f"{m['engage_jerk']} m/sÂ²/s", "Abrupt engagement when moving the selector (R/D) â driveline clunk/shock.")
+            issue("Garage-shift clunk", _sev(m["engage_jerk"], TH["jerk_warn"], TH["jerk_bad"]), f"{m['engage_jerk']} m/s²/s", "Abrupt engagement when moving the selector (R/D) — driveline clunk/shock.")
             act(1, "Smooth garage-shift engagement", "Soften clutch/converter engagement torque on lever change; manage lash take-up at engagement.")
 
     elif t == "tip_out_overrun":
@@ -160,14 +165,40 @@ def diagnose(ev, m):
             issue("Idle vibration", _sev(m["idle_shake"], 0.05, 0.12), f"{m['idle_shake']} m/s²", "Measurable body vibration at idle.")
             act(1, "Reduce idle vibration", "Check idle speed/combustion stability and mount tuning.")
 
-    worst = "ok"
+    # Merge AVL Operation Modes Criteria — rated 0–10 vs program targets
+    main, sub = avl_map.avl_for(ev)
+    _, _, _, crit_rows = avl_map.scorecard(ev, m)
+    odriv_issues = crit_mod.issues_from_criteria(crit_rows)
+    odriv_actions = crit_mod.actions_from_criteria(crit_rows)
+    existing_titles = {i["title"].lower() for i in issues}
+    for oi in odriv_issues:
+        if oi["title"].lower() not in existing_titles:
+            issues.append(oi)
+            existing_titles.add(oi["title"].lower())
+    act_titles = {a["title"].lower() for a in actions}
+    next_pri = max((a["priority"] for a in actions), default=0) + 1
+    for oa in odriv_actions:
+        if oa["title"].lower() not in act_titles:
+            oa = dict(oa, priority=next_pri)
+            actions.append(oa)
+            act_titles.add(oa["title"].lower())
+            next_pri += 1
+
+    # Top KPI cards from highest-priority measured ODRIV criteria
+    rated = [r for r in crit_rows if r.get("rating") is not None]
+    rated.sort(key=lambda r: (r.get("driv") or 9))
+    for r in rated[:2]:
+        sub = f"target {r['t']:.1f} · warn {r['wl']:.1f}"
+        if r.get("physical") is not None:
+            sub += f" · {r['physical']} {r['unit']}"
+        kpis.insert(0, {"k": r["criteria"], "v": f"{r['rating']:.1f}<small>/10</small>", "sub": sub, "sev": r["sev"]})
+
+    worst = crit_mod.summarize_verdict(crit_rows)
     for i in issues:
         if i["severity"] == "bad":
             worst = "bad"; break
-        if i["severity"] == "warn":
+        if i["severity"] == "warn" and worst != "bad":
             worst = "warn"
-    if not issues:
-        worst = "ok"
     actions.sort(key=lambda a: a["priority"])
     while len(kpis) < 4:
         kpis.append({"k": "—", "v": "—", "sub": "", "sev": "na"})

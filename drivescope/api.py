@@ -39,16 +39,29 @@ def get_criteria():
 
 @app.post("/api/criteria")
 async def upload_criteria(file: UploadFile = File(...)):
-    """Upload Operation Modes Criteria (.edo or .json) from ODRIV / AVL-DRIVE."""
+    """Upload Operation Modes Criteria (.edo or .json) from AVL-DRIVE / ODRIV."""
     data = await file.read()
     try:
         crit = edo_loader.load_from_bytes(data, source=file.filename or "upload")
+        if crit.get("_avl_hierarchy"):
+            avl = crit["_avl_hierarchy"]
+            dest = edo_loader.import_avl_hierarchy(avl)
+            n_modes = len(avl.get("modes", []))
+            n_crit = sum(len(m.get("criteria", [])) for m in avl.get("modes", []))
+            return JSONResponse({
+                "ok": True,
+                "format": "avl_hierarchy",
+                "source": str(dest),
+                "n_modes": n_modes,
+                "n_criteria": n_crit,
+            })
         dest = CFG / (file.filename if file.filename else "operation_modes_criteria.edo")
         dest.write_bytes(data)
         edo_loader.reload(dest)
         edo_loader.save_json(crit, CFG / "sdv_criteria.json")
         return JSONResponse({
             "ok": True,
+            "format": "odriv_targets",
             "source": str(dest),
             "n_modes": len(crit),
             "modes": list(crit.keys()),

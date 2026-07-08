@@ -89,9 +89,20 @@ def _parse_text(data: bytes) -> dict:
     if not text:
         raise EdoParseError("empty criteria file")
     obj = json.loads(text)
+    if isinstance(obj, dict) and "modes" in obj:
+        return {"_avl_hierarchy": obj}
     if not isinstance(obj, dict):
         raise EdoParseError("criteria JSON must be an object keyed by operation-mode name")
     return _normalize(obj)
+
+
+def import_avl_hierarchy(data: dict) -> Path:
+    """Save AVL Operation modes / Criteria hierarchy and reload catalog."""
+    from . import avl_map
+    dest = CFG / "avl_operation_modes.json"
+    dest.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    avl_map.reload_catalog()
+    return dest
 
 
 def _normalize(raw: dict) -> dict:

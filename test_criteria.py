@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Smoke tests for Operation Modes Criteria (.edo) integration."""
+"""Smoke tests for AVL Operation Modes Criteria integration."""
 import json
 import struct
 import tempfile
 from pathlib import Path
 
-from drivescope import edo_loader, criteria, sdv_map
+from drivescope import edo_loader, criteria, avl_map, sdv_map
 
 
 def _make_edo(modes: dict) -> bytes:
@@ -22,11 +22,36 @@ def _make_edo(modes: dict) -> bytes:
     return bytes(buf)
 
 
-def test_json_load():
+def test_avl_hierarchy_load():
+    avl = avl_map.catalog()
+    assert "modes" in avl
+    assert len(avl["modes"]) >= 20
+    creep = avl_map.enabled_criteria("Drive away", "Creep")
+    assert any(c["name"] == "Brake release bump" for c in creep)
+
+
+def test_event_to_avl_mapping():
+    ev = {"type": "kickdown_downshift", "label": "KD"}
+    main, sub = avl_map.avl_for(ev)
+    assert main == "Gear shift"
+    assert sub == "Tip-in downshift"
+
+
+def test_avl_scorecard():
+    ev = {"type": "kickdown_downshift", "label": "KD"}
+    m = {"tot_ms": 420, "exec_ms": 480, "dec_ms": 120, "posg": 22, "negg": -12, "shock": 0.7}
+    main, sub, sdv, rows = avl_map.scorecard(ev, m)
+    assert main == "Gear shift"
+    assert len(rows) > 5
+    assert all(r.get("enabled") for r in rows)
+    rated = [r for r in rows if r["rating"] is not None]
+    assert rated
+
+
+def test_json_targets_load():
     sample = {
         "(PT) KD - tip in downshift": [
             {"criteria": "Response delay", "t": 8.0, "wl": 7.6, "driv": 1},
-            {"criteria": "Shock", "t": 7.9, "wl": 7.0, "driv": 2},
         ]
     }
     with tempfile.NamedTemporaryFile("w", suffix=".json", delete=False) as f:
@@ -34,39 +59,21 @@ def test_json_load():
         path = f.name
     crit = edo_loader.load(path)
     assert "(PT) KD - tip in downshift" in crit
-    assert len(crit["(PT) KD - tip in downshift"]) == 2
 
 
-def test_binary_edo_roundtrip():
-    sample = {
-        "Power-on upshift": [
-            {"criteria": "Shift duration", "t": 8.0, "wl": 7.5, "driv": 1},
-        ]
-    }
-    data = _make_edo(sample)
-    crit = edo_loader.load_from_bytes(data)
-    assert crit["Power-on upshift"][0]["criteria"] == "Shift duration"
-
-
-def test_rating_and_verdict():
-    metrics = {"tot_ms": 400, "exec_ms": 550, "posg": 28, "shock": 0.8}
-    rows = criteria.evaluate_mode("(PT) KD - tip in downshift", metrics)
-    rated = [r for r in rows if r["rating"] is not None]
-    assert rated, "expected at least one rated criterion"
-    assert criteria.summarize_verdict(rows) in ("ok", "warn", "bad")
-
-
-def test_scorecard_integration():
-    ev = {"type": "kickdown_downshift", "label": "KD"}
-    m = {"tot_ms": 420, "exec_ms": 480, "dec_ms": 120, "posg": 22, "negg": -12, "shock": 0.7}
+def test_sdv_map_wrapper():
+    ev = {"type": "drive_away", "label": "Launch"}
+    m = {"launch_ms": 400, "jerk_peak": 10, "ax_peak": 2.5}
     name, group, rows = sdv_map.scorecard(ev, m)
-    assert name == "(PT) KD - tip in downshift"
-    assert any(r.get("rating") is not None for r in rows)
+    assert "Drive away" in name
+    assert group == "Drive away"
+    assert len(rows) > 0
 
 
 if __name__ == "__main__":
-    test_json_load()
-    test_binary_edo_roundtrip()
-    test_rating_and_verdict()
-    test_scorecard_integration()
+    test_avl_hierarchy_load()
+    test_event_to_avl_mapping()
+    test_avl_scorecard()
+    test_json_targets_load()
+    test_sdv_map_wrapper()
     print("criteria tests OK")

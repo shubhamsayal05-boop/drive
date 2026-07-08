@@ -6,6 +6,7 @@ from . import events as ev_mod
 from . import metrics as met
 from . import diagnostics as diag
 from . import sdv_map
+from . import avl_map
 from . import edo_loader
 from . import markers as mk_mod
 
@@ -37,6 +38,7 @@ def analyze(path, channel_config=None, max_events=24, vehicle_cfg=None):
         sigs, m = met.compute(rec, ev)
         issues, actions, verdict, kpis = diag.diagnose(ev, m)
         sdv_name, sdv_group, criteria = sdv_map.scorecard(ev, m)
+        avl_main, avl_sub = avl_map.avl_for(ev)
         evt_markers = mk_mod.build(ev, sigs, m, issues)
         keep = ["t"] + [s for s in LANE_SIGNALS if s in sigs]
         sub = {k: sigs[k] for k in keep}
@@ -45,6 +47,7 @@ def analyze(path, channel_config=None, max_events=24, vehicle_cfg=None):
         results.append({
             "id": i, "type": ev["type"], "label": ev["label"],
             "sdv": sdv_name, "group": sdv_group, "criteria": criteria,
+            "avl_main": avl_main, "avl_sub": avl_sub,
             "window": {"t0": round(ev["t0"], 2), "t1": round(ev["t1"], 2)},
             "trigger": round(ev["t_trigger"], 2), "shift": round(ev["t_shift"], 2),
             "verdict": verdict, "kpis": kpis, "metrics": m,

@@ -4,7 +4,7 @@ Uses Operation Modes Criteria (.edo / sdv_criteria.json) for ODRIV-aligned
 0–10 ratings where measurable; retains physical KPI cards for the dashboard.
 """
 from . import criteria as crit_mod
-from . import sdv_map
+from . import avl_map
 
 TH = {
     "resp_warn": 350, "resp_bad": 500, "exec_warn": 400, "exec_bad": 600,
@@ -165,9 +165,9 @@ def diagnose(ev, m):
             issue("Idle vibration", _sev(m["idle_shake"], 0.05, 0.12), f"{m['idle_shake']} m/s²", "Measurable body vibration at idle.")
             act(1, "Reduce idle vibration", "Check idle speed/combustion stability and mount tuning.")
 
-    # Merge ODRIV Operation Modes Criteria (.edo) — rated 0–10 vs program targets
-    sdv_name, _ = sdv_map.sdv_for(ev)
-    crit_rows = crit_mod.evaluate_mode(sdv_name, m)
+    # Merge AVL Operation Modes Criteria — rated 0–10 vs program targets
+    main, sub = avl_map.avl_for(ev)
+    _, _, _, crit_rows = avl_map.scorecard(ev, m)
     odriv_issues = crit_mod.issues_from_criteria(crit_rows)
     odriv_actions = crit_mod.actions_from_criteria(crit_rows)
     existing_titles = {i["title"].lower() for i in issues}
